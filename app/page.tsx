@@ -88,20 +88,20 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-2" aria-label="logo-mall-for-latam">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between gap-3 flex-wrap sm:flex-nowrap">
+          <div className="flex items-center space-x-2 flex-1 min-w-0" aria-label="logo-mall-for-latam">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center" role="img" aria-label="logo-mall-for-latam">
               <ShoppingCart className="h-5 w-5 text-white" aria-hidden="true" />
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent whitespace-nowrap">
               Mall for Latam
             </span>
             <span className="sr-only">logo-mall-for-latam</span>
           </div>
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
             <LanguageSelector currentLocale={locale} onLocaleChange={changeLocale} />
-            <Button variant="ghost">{t.nav.login}</Button>
-            <Button>{t.nav.getStarted}</Button>
+            <Button variant="ghost" className="hidden sm:inline-flex">{t.nav.login}</Button>
+            <Button className="px-3 py-2 text-sm sm:px-4 sm:py-2 sm:text-base">{t.nav.getStarted}</Button>
           </div>
         </div>
       </header>
