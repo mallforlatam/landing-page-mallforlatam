@@ -410,7 +410,7 @@ export default function Home() {
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>{t.footer.copyright}</p>
+            <p>&copy; {new Date().getFullYear()} {t.footer.copyright}</p>
           </div>
         </div>
       </footer>

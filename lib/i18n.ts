@@ -247,7 +247,7 @@ export const translations: Record<Locale, Translations> = {
         terms: 'Términos de Servicio',
         cookies: 'Política de Cookies',
       },
-      copyright: '© 2025 Mall for Latam. Todos los derechos reservados.',
+      copyright: 'Mall for Latam. Todos los derechos reservados.',
     },
   },
   en: {
@@ -361,7 +361,7 @@ export const translations: Record<Locale, Translations> = {
         terms: 'Terms of Service',
         cookies: 'Cookie Policy',
       },
-      copyright: '© 2025 Mall for Latam. All rights reserved.',
+      copyright: 'Mall for Latam. All rights reserved.',
     },
   },
   pt: {
@@ -475,7 +475,7 @@ export const translations: Record<Locale, Translations> = {
         terms: 'Termos de Serviço',
         cookies: 'Política de Cookies',
       },
-      copyright: '© 2025 Mall for Latam. Todos os direitos reservados.',
+      copyright: 'Mall for Latam. Todos os direitos reservados.',
     },
   },
 };
