@@ -170,8 +170,8 @@ export const translations: Record<Locale, Translations> = {
         description: 'Paga con MercadoPago, PagoEfectivo y métodos locales',
       },
       smartLogistics: {
-        title: 'Logística Inteligente',
-        description: 'Envíos consolidados con seguimiento en tiempo real',
+        title: 'Envío Consolidado',
+        description: 'Envíos consolidados con seguimiento de tu pedido',
       },
       secureReliable: {
         title: 'Seguro y Confiable',
@@ -186,12 +186,12 @@ export const translations: Record<Locale, Translations> = {
         description: 'Navega o usa nuestra extensión de Chrome para agregar productos de cualquier tienda internacional',
       },
       checkout: {
-        title: '2. Checkout Inteligente',
-        description: 'Nuestra IA calcula todos los costos por adelantado: producto + envío + impuestos + comisiones',
+        title: '2. Pago sin Sorpresas',
+        description: 'Calculamos todos los costos por adelantado: producto, comisión y envío. Sin sorpresas al final.',
       },
       receive: {
         title: '3. Recibe y Rastrea',
-        description: 'Nos encargamos de todo desde la compra hasta la entrega con seguimiento en tiempo real',
+        description: 'Nos encargamos de todo desde la compra hasta la entrega, con seguimiento de tu envío',
       },
     },
     socialProof: {
@@ -284,8 +284,8 @@ export const translations: Record<Locale, Translations> = {
         description: 'Pay with MercadoPago, PagoEfectivo, and local methods',
       },
       smartLogistics: {
-        title: 'Smart Logistics',
-        description: 'Consolidated shipping with real-time tracking',
+        title: 'Consolidated Shipping',
+        description: 'Consolidated shipping with order tracking',
       },
       secureReliable: {
         title: 'Secure & Reliable',
@@ -300,12 +300,12 @@ export const translations: Record<Locale, Translations> = {
         description: 'Browse or use our Chrome extension to add products from any international store',
       },
       checkout: {
-        title: '2. Smart Checkout',
-        description: 'Our AI calculates all costs upfront: product + shipping + taxes + fees',
+        title: '2. No-Surprises Checkout',
+        description: 'We calculate all costs upfront: product, fee, and shipping. No surprises at the end.',
       },
       receive: {
         title: '3. Receive & Track',
-        description: 'We handle everything from purchase to delivery with real-time tracking',
+        description: 'We handle everything from purchase to delivery, with order tracking',
       },
     },
     socialProof: {
@@ -398,8 +398,8 @@ export const translations: Record<Locale, Translations> = {
         description: 'Pague com MercadoPago, PagoEfectivo e métodos locais',
       },
       smartLogistics: {
-        title: 'Logística Inteligente',
-        description: 'Frete consolidado com rastreamento em tempo real',
+        title: 'Frete Consolidado',
+        description: 'Frete consolidado com rastreamento do seu pedido',
       },
       secureReliable: {
         title: 'Seguro e Confiável',
@@ -414,12 +414,12 @@ export const translations: Record<Locale, Translations> = {
         description: 'Navegue ou use nossa extensão do Chrome para adicionar produtos de qualquer loja internacional',
       },
       checkout: {
-        title: '2. Checkout Inteligente',
-        description: 'Nossa IA calcula todos os custos antecipadamente: produto + frete + impostos + taxas',
+        title: '2. Pagamento sem Surpresas',
+        description: 'Calculamos todos os custos antecipadamente: produto, taxa de serviço e frete. Sem surpresas no final.',
       },
       receive: {
         title: '3. Receba e Rastreie',
-        description: 'Cuidamos de tudo desde a compra até a entrega com rastreamento em tempo real',
+        description: 'Cuidamos de tudo desde a compra até a entrega, com rastreamento do seu pedido',
       },
     },
     socialProof: {

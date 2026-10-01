@@ -8,13 +8,14 @@ export const metadata: Metadata = {
 
 export default function MobileAppPage() {
   return (
-    <LegalPage title="App Móvil" updatedAt="30 de septiembre de 2026">
+    <LegalPage title="App Móvil" updatedAt="1 de octubre de 2026">
       <p>
-        Hoy puedes usar Mall for Latam desde nuestra extensión de Chrome
-        (para agregar productos) y desde el dashboard web en{' '}
+        Hoy puedes usar Mall for Latam desde nuestra extensión de Chrome en
+        computadora (para agregar productos) y desde el dashboard web en{' '}
         <a href="https://app.mallforlatam.com">app.mallforlatam.com</a> (para
-        pagar, hacer seguimiento de tu pedido y gestionar tu cuenta) — ambos
-        funcionan perfectamente desde el navegador de tu celular.
+        pagar, hacer seguimiento y gestionar tu cuenta). El dashboard funciona
+        desde el navegador de tu celular; la extensión, por ahora, solo en
+        Chrome de escritorio.
       </p>
 
       <h2>¿Y la app móvil?</h2>
