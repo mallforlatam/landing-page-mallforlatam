@@ -120,6 +120,92 @@ export default function PrivacyPolicyPage() {
         Si tienes preguntas sobre esta política, escríbenos a{' '}
         <a href="mailto:privacidad@mallforlatam.com">privacidad@mallforlatam.com</a>.
       </p>
+      <p>
+        Correo de privacidad en texto plano (por si tu lector no procesa
+        enlaces <code>mailto:</code>):{' '}
+        <span
+          // Cloudflare "Email Address Obfuscation" reescribe cualquier
+          // mailto:/email visible como /cdn-cgi/l/email-protection, lo que
+          // vuelve el correo ilegible para un bot que no ejecuta JS (como el
+          // revisor de Chrome Web Store). Este comentario HTML es el
+          // mecanismo que Cloudflare documenta para excluir un bloque
+          // puntual de esa reescritura — por eso se inyecta así y no como
+          // texto JSX normal (JSX no puede emitir comentarios HTML reales).
+          dangerouslySetInnerHTML={{
+            __html: `<!--email_off-->${LEGAL.emailPrivacidad}<!--/email_off-->`,
+          }}
+        />
+      </p>
+
+      <h2 id="dominios-extension">10. Dominios donde opera la extensión</h2>
+      <p>
+        Nuestra extensión de Chrome solo puede ejecutarse en páginas de los
+        siguientes dominios (es el permiso exacto declarado en su manifiesto):
+      </p>
+      <ul>
+        <li>ebay.com (eBay)</li>
+        <li>amazon.com (Amazon)</li>
+        <li>walmart.com (Walmart)</li>
+        <li>shein.com (Shein)</li>
+        <li>tommy.com (Tommy Hilfiger)</li>
+        <li>jomashop.com (Jomashop)</li>
+      </ul>
+      <p>
+        En cualquier otro sitio web, la extensión está inactiva y no se
+        ejecuta.
+      </p>
+
+      <h2 id="lo-que-no-recopilamos">11. Lo que no recopilamos</h2>
+      <p>
+        La extensión se activa únicamente en páginas de producto de los
+        sitios listados arriba. No lee, almacena ni transmite tu historial de
+        navegación, ni el contenido de otras páginas o pestañas que tengas
+        abiertas — solo extrae los datos del producto (título, precio,
+        imagen, enlace) cuando tú decides agregarlo a tu carrito.
+      </p>
+
+      <h2 id="uso-limitado-de-datos">12. Uso limitado de datos</h2>
+      <p>
+        El uso de los datos que recopilamos se limita exclusivamente al
+        propósito declarado en esta política: procesar tus pedidos y
+        operar el servicio de compra internacional. En particular:
+      </p>
+      <ul>
+        <li>No vendemos tus datos personales a terceros.</li>
+        <li>No los transferimos salvo lo estrictamente necesario para prestar el servicio (ver sección 3).</li>
+        <li>No los usamos para publicidad, evaluación crediticia ni para ofrecer préstamos.</li>
+      </ul>
+
+      <h2 id="transferencia-internacional">13. Transferencia internacional de datos</h2>
+      <p>
+        Tus datos se almacenan en servidores de nuestros proveedores de
+        infraestructura (base de datos y hosting), ubicados fuera del Perú.
+        Esta transferencia internacional se realiza conforme a la Ley de
+        Protección de Datos Personales (Ley N.º 29733) y su reglamento, y
+        solo para los fines descritos en esta política.
+      </p>
+
+      <h2 id="eliminacion-de-datos">14. Eliminación de datos</h2>
+      <p>
+        Puedes solicitar la eliminación de tu cuenta y de tus datos
+        personales escribiéndonos a{' '}
+        <a href="mailto:privacidad@mallforlatam.com">privacidad@mallforlatam.com</a>.
+        Procesamos estas solicitudes dentro de un plazo máximo de 30 días
+        calendario, salvo que debamos conservar cierta información por
+        obligaciones legales, contables o de resolución de disputas (ver
+        sección 6).
+      </p>
+
+      <h2 id="analitica">15. Analítica</h2>
+      <p>
+        {/* TODO: confirmar en el panel de Vercel (Project → Analytics) si
+            Web Analytics está activado a nivel de proyecto; eso no deja
+            rastro en el código fuente y no se puede verificar desde aquí.
+            Si está activado, esta sección debe actualizarse para
+            declararlo. */}
+        No utilizamos herramientas de analítica ni seguimiento de terceros en
+        este sitio.
+      </p>
     </LegalPage>
   );
 }

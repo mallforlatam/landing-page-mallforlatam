@@ -34,6 +34,22 @@ export default function ContactPage() {
         cancelación u oposición):{' '}
         <a href="mailto:privacidad@mallforlatam.com">privacidad@mallforlatam.com</a>
       </p>
+      <p>
+        Correo de privacidad en texto plano (por si tu lector no procesa
+        enlaces <code>mailto:</code>):{' '}
+        <span
+          // Cloudflare "Email Address Obfuscation" reescribe cualquier
+          // mailto:/email visible como /cdn-cgi/l/email-protection, lo que
+          // vuelve el correo ilegible para un bot que no ejecuta JS (como el
+          // revisor de Chrome Web Store). Este comentario HTML es el
+          // mecanismo que Cloudflare documenta para excluir un bloque
+          // puntual de esa reescritura — por eso se inyecta así y no como
+          // texto JSX normal (JSX no puede emitir comentarios HTML reales).
+          dangerouslySetInnerHTML={{
+            __html: `<!--email_off-->${LEGAL.emailPrivacidad}<!--/email_off-->`,
+          }}
+        />
+      </p>
 
       <h2>¿Primera vez comprando con nosotros?</h2>
       <p>
