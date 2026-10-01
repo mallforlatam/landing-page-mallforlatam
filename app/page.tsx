@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -89,48 +91,57 @@ export default function Home() {
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between gap-3 flex-wrap sm:flex-nowrap">
-          <div className="flex items-center space-x-2 flex-1 min-w-0" aria-label="logo-mall-for-latam">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center" role="img" aria-label="logo-mall-for-latam">
-              <ShoppingCart className="h-5 w-5 text-white" aria-hidden="true" />
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent whitespace-nowrap">
-              Mall for Latam
-            </span>
-            <span className="sr-only">logo-mall-for-latam</span>
+          <div className="flex items-center flex-1 min-w-0">
+            <Image
+              src="/logo-horizontal.png"
+              alt="Mall for Latam"
+              width={448}
+              height={148}
+              priority
+              className="h-8 w-auto"
+            />
           </div>
           <div className="flex items-center gap-2 sm:gap-4 shrink-0">
             <LanguageSelector currentLocale={locale} onLocaleChange={changeLocale} />
-            <Button variant="ghost" className="hidden sm:inline-flex">{t.nav.login}</Button>
-            <Button className="px-3 py-2 text-sm sm:px-4 sm:py-2 sm:text-base">{t.nav.getStarted}</Button>
+            <Button variant="ghost" className="px-2 text-sm sm:px-4 sm:text-base" asChild>
+              <a href="https://app.mallforlatam.com">{t.nav.login}</a>
+            </Button>
+            <Button className="px-3 py-2 text-sm sm:px-4 sm:py-2 sm:text-base" asChild>
+              <a href="https://app.mallforlatam.com">{t.nav.getStarted}</a>
+            </Button>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 text-center">
-        <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-200">
+        <Badge className="mb-4 bg-brand-blue/10 text-brand-blue hover:bg-brand-blue/20">
           <Zap className="h-3 w-3 mr-1" aria-hidden="true" />
           {t.hero.badge}
         </Badge>
-        
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent whitespace-pre-line">
+
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-brand-blue to-brand-purple bg-clip-text text-transparent whitespace-pre-line">
           {t.hero.title}
         </h1>
-        
+
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
           {t.hero.subtitle}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <div className="flex w-full sm:w-auto">
+        <div className="flex flex-col items-center mb-12">
+          <label htmlFor="hero-email" className="mb-2 text-sm font-medium text-gray-700">
+            {t.hero.emailLabel}
+          </label>
+          <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-0">
             <Input
+              id="hero-email"
               type="email"
               placeholder={t.hero.emailPlaceholder}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="rounded-r-none min-w-[300px]"
+              className="sm:rounded-r-none min-w-[300px]"
             />
-            <Button onClick={handleJoinWaitlist} disabled={isSubmitting || !email} className="rounded-l-none bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+            <Button onClick={handleJoinWaitlist} disabled={isSubmitting || !email} className="sm:rounded-l-none bg-gradient-to-r from-brand-blue to-brand-purple hover:opacity-90">
               {t.hero.joinWaitlist}
               <ArrowRight className="h-4 w-4 ml-2" aria-hidden="true" />
             </Button>
@@ -162,8 +173,8 @@ export default function Home() {
           {features.map((feature, index) => (
             <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <CardHeader className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <div className="text-blue-600">
+                <div className="w-12 h-12 bg-gradient-to-r from-brand-blue/10 to-brand-purple/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="text-brand-blue">
                     {feature.icon}
                   </div>
                 </div>
@@ -193,7 +204,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-6">
                 <Search className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-4">{t.howItWorks.discover.title}</h3>
@@ -203,7 +214,7 @@ export default function Home() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-brand-blue to-brand-purple rounded-full flex items-center justify-center mx-auto mb-6">
                 <ShoppingCart className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-4">{t.howItWorks.checkout.title}</h3>
@@ -213,7 +224,7 @@ export default function Home() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-brand-purple rounded-full flex items-center justify-center mx-auto mb-6">
                 <Truck className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-4">{t.howItWorks.receive.title}</h3>
@@ -264,7 +275,7 @@ export default function Home() {
                     <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <p className="text-gray-600 mb-4">"{testimonial.review}"</p>
+                <p className="text-gray-600 mb-4">&ldquo;{testimonial.review}&rdquo;</p>
                 <div>
                   <div className="font-semibold">{testimonial.name}</div>
                   <div className="text-sm text-gray-500">{testimonial.location}</div>
@@ -276,7 +287,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+      <section className="bg-gradient-to-r from-brand-blue to-brand-purple py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             {t.cta.title}
@@ -284,14 +295,24 @@ export default function Home() {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             {t.cta.subtitle}
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-              <CheckCircle className="h-5 w-5 mr-2" />
-              {t.cta.joinBeta}
+            <Button size="lg" className="bg-white text-brand-blue hover:bg-gray-100" asChild>
+              <a href="https://app.mallforlatam.com">
+                <CheckCircle className="h-5 w-5 mr-2" />
+                {t.cta.joinBeta}
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-transparent border-white text-white hover:bg-white hover:text-brand-blue relative"
+              onClick={() => toast.info(t.cta.downloadExtensionToast)}
+            >
               {t.cta.downloadExtension}
+              <Badge className="ml-2 bg-white/20 text-white hover:bg-white/20">
+                {t.cta.downloadExtensionBadge}
+              </Badge>
             </Button>
           </div>
         </div>
@@ -302,12 +323,13 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <ShoppingCart className="h-5 w-5 text-white" />
-                </div>
-                <span className="text-xl font-bold">Mall for Latam</span>
-              </div>
+              <Image
+                src="/logo-horizontal.png"
+                alt="Mall for Latam"
+                width={448}
+                height={148}
+                className="h-8 w-auto mb-4"
+              />
               <p className="text-gray-400">
                 {t.footer.description}
               </p>
@@ -338,8 +360,21 @@ export default function Home() {
               <ul className="space-y-2 text-gray-400">
                 <li>{t.footer.company.about}</li>
                 <li>{t.footer.company.careers}</li>
-                <li>{t.footer.company.privacy}</li>
-                <li>{t.footer.company.terms}</li>
+                <li>
+                  <Link href="/privacidad" className="hover:text-white">
+                    {t.footer.company.privacy}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/terminos" className="hover:text-white">
+                    {t.footer.company.terms}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/cookies" className="hover:text-white">
+                    {t.footer.company.cookies}
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

@@ -1,14 +1,35 @@
 import './globals.css';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { Toaster } from 'sonner';
 
 const inter = Inter({ subsets: ['latin'] });
 
+const title = 'Compra Globalmente, Paga Localmente con Mall for Latam';
+const description =
+  'Accede a miles de productos internacionales pagando en tu moneda local. Sin tarjetas internacionales, sin trámites. Compra global, paga local.';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
-  title: 'Compra Globalmente, Paga Localmente con Mall for Latam',
-  description:
-    'Accede a miles de productos internacionales pagando en tu moneda local. Sin tarjetas internacionales, sin trámites. Compra global, paga local.',
+  metadataBase: new URL('https://mallforlatam.com'),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    siteName: 'Mall for Latam',
+    locale: 'es_PE',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+  },
   keywords: [
     // Head keywords
     'mall for latam',

@@ -20,6 +20,8 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       colors: {
+        'brand-blue': '#5b66ff',
+        'brand-purple': '#cc00ff',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

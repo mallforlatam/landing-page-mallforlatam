@@ -24,6 +24,7 @@ export interface Translations {
     badge: string;
     title: string;
     subtitle: string;
+    emailLabel: string;
     emailPlaceholder: string;
     joinWaitlist: string;
     stats: {
@@ -103,6 +104,8 @@ export interface Translations {
     subtitle: string;
     joinBeta: string;
     downloadExtension: string;
+    downloadExtensionBadge: string;
+    downloadExtensionToast: string;
   };
   
   // Footer
@@ -128,6 +131,7 @@ export interface Translations {
       careers: string;
       privacy: string;
       terms: string;
+      cookies: string;
     };
     copyright: string;
   };
@@ -148,6 +152,7 @@ export const translations: Record<Locale, Translations> = {
       badge: 'Ahora en Beta - Únete a la Revolución',
       title: 'Compra Globalmente,\nPaga Localmente',
       subtitle: 'Accede a millones de productos internacionales con métodos de pago locales, envíos consolidados y precios transparentes. No más barreras para las compras globales.',
+      emailLabel: 'Correo electrónico',
       emailPlaceholder: 'Ingresa tu email',
       joinWaitlist: 'Unirse a Lista de Espera',
       stats: {
@@ -218,7 +223,9 @@ export const translations: Record<Locale, Translations> = {
       title: 'Empieza hoy a comprar globalmente',
       subtitle: 'Únete a miles de latinoamericanos que ya están comprando de manera más inteligente con Mall for Latam.',
       joinBeta: 'Unirse al Programa Beta',
-      downloadExtension: 'Descargar Extensión',
+      downloadExtension: 'Descargar Extensión de Chrome',
+      downloadExtensionBadge: 'Próximamente',
+      downloadExtensionToast: 'La extensión está en revisión en Chrome Web Store. ¡Muy pronto podrás descargarla!',
     },
     footer: {
       description: 'Democratizando el acceso a productos globales para Latinoamérica.',
@@ -242,6 +249,7 @@ export const translations: Record<Locale, Translations> = {
         careers: 'Carreras',
         privacy: 'Política de Privacidad',
         terms: 'Términos de Servicio',
+        cookies: 'Política de Cookies',
       },
       copyright: '© 2025 Mall for Latam. Todos los derechos reservados.',
     },
@@ -260,6 +268,7 @@ export const translations: Record<Locale, Translations> = {
       badge: 'Now in Beta - Join the Revolution',
       title: 'Shop Globally,\nPay Locally',
       subtitle: 'Access millions of international products with local payment methods, consolidated shipping, and transparent pricing. No more barriers to global shopping.',
+      emailLabel: 'Email address',
       emailPlaceholder: 'Enter your email',
       joinWaitlist: 'Join Waitlist',
       stats: {
@@ -330,7 +339,9 @@ export const translations: Record<Locale, Translations> = {
       title: 'Start shopping globally today',
       subtitle: 'Join thousands of Latin Americans who are already shopping smarter with Mall for Latam.',
       joinBeta: 'Join Beta Program',
-      downloadExtension: 'Download Extension',
+      downloadExtension: 'Download Chrome Extension',
+      downloadExtensionBadge: 'Coming soon',
+      downloadExtensionToast: 'The extension is under review on the Chrome Web Store. You will be able to download it very soon!',
     },
     footer: {
       description: 'Democratizing access to global products for Latin America.',
@@ -354,6 +365,7 @@ export const translations: Record<Locale, Translations> = {
         careers: 'Careers',
         privacy: 'Privacy Policy',
         terms: 'Terms of Service',
+        cookies: 'Cookie Policy',
       },
       copyright: '© 2025 Mall for Latam. All rights reserved.',
     },
@@ -372,6 +384,7 @@ export const translations: Record<Locale, Translations> = {
       badge: 'Agora em Beta - Junte-se à Revolução',
       title: 'Compre Globalmente,\nPague Localmente',
       subtitle: 'Acesse milhões de produtos internacionais com métodos de pagamento locais, frete consolidado e preços transparentes. Chega de barreiras para compras globais.',
+      emailLabel: 'E-mail',
       emailPlaceholder: 'Digite seu email',
       joinWaitlist: 'Entrar na Lista de Espera',
       stats: {
@@ -442,7 +455,9 @@ export const translations: Record<Locale, Translations> = {
       title: 'Comece a comprar globalmente hoje',
       subtitle: 'Junte-se a milhares de latino-americanos que já estão comprando de forma mais inteligente com Mall for Latam.',
       joinBeta: 'Entrar no Programa Beta',
-      downloadExtension: 'Baixar Extensão',
+      downloadExtension: 'Baixar Extensão do Chrome',
+      downloadExtensionBadge: 'Em breve',
+      downloadExtensionToast: 'A extensão está em revisão na Chrome Web Store. Você poderá baixá-la muito em breve!',
     },
     footer: {
       description: 'Democratizando o acesso a produtos globais para a América Latina.',
@@ -466,6 +481,7 @@ export const translations: Record<Locale, Translations> = {
         careers: 'Carreiras',
         privacy: 'Política de Privacidade',
         terms: 'Termos de Serviço',
+        cookies: 'Política de Cookies',
       },
       copyright: '© 2025 Mall for Latam. Todos os direitos reservados.',
     },
