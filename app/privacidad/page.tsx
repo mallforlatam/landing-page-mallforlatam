@@ -51,10 +51,10 @@ export default function PrivacyPolicyPage() {
       </ul>
       <p>
         <strong>No almacenamos datos de tarjetas ni cuentas bancarias.</strong>{' '}
-        Los pagos con Yape y Plin se coordinan manualmente por nuestro equipo
-        (por ejemplo, por WhatsApp), y el pago con tarjeta se procesa a
-        través de una pasarela de pagos externa cuando esté disponible — M4L
-        nunca ve ni guarda el número completo de tu tarjeta.
+        Pagas con Yape, Plin y tarjetas de crédito o débito a través de
+        nuestra pasarela de pagos (PagoEfectivo / Izipay), que procesa tu
+        pago de forma inmediata — M4L nunca ve ni guarda el número completo
+        de tu tarjeta ni tus datos bancarios.
       </p>
 
       <h2>2. Para qué usamos tus datos</h2>

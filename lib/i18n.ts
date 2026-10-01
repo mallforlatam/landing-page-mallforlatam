@@ -167,7 +167,7 @@ export const translations: Record<Locale, Translations> = {
       },
       localPayments: {
         title: 'Pagos Locales',
-        description: 'Paga con MercadoPago, PagoEfectivo y métodos locales',
+        description: 'Paga con Yape, Plin y tarjetas de crédito o débito',
       },
       smartLogistics: {
         title: 'Envío Consolidado',
@@ -281,7 +281,7 @@ export const translations: Record<Locale, Translations> = {
       },
       localPayments: {
         title: 'Local Payments',
-        description: 'Pay with MercadoPago, PagoEfectivo, and local methods',
+        description: 'Pay with Yape, Plin, and credit or debit cards',
       },
       smartLogistics: {
         title: 'Consolidated Shipping',
@@ -395,7 +395,7 @@ export const translations: Record<Locale, Translations> = {
       },
       localPayments: {
         title: 'Pagamentos Locais',
-        description: 'Pague com MercadoPago, PagoEfectivo e métodos locais',
+        description: 'Pague com Yape, Plin e cartões de crédito ou débito',
       },
       smartLogistics: {
         title: 'Frete Consolidado',

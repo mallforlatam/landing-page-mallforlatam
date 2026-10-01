@@ -39,7 +39,7 @@ export default function TermsPage() {
         <li>Agregas productos a tu carrito desde la extensión de Chrome, en las tiendas compatibles.</li>
         <li>Completas tu dirección de envío y confirmas el pago en el dashboard.</li>
         <li>El subtotal de productos de un mismo pedido no puede superar los $200 USD — es un límite operativo mientras estamos en etapa inicial.</li>
-        <li>Nuestro equipo valida tu pago manualmente y asigna un código de guía único a tu pedido (formato M4L-00001-2026).</li>
+        <li>Tu pago se valida automáticamente a través de nuestra pasarela de pagos, y te asignamos un código de guía único a tu pedido (formato M4L-00001-2026).</li>
         <li>Compramos los productos, los consolidamos en Miami y los enviamos a tu ciudad; puedes seguir el estado de tu envío desde el dashboard.</li>
       </ul>
 
@@ -55,10 +55,10 @@ export default function TermsPage() {
 
       <h2>4. Pagos</h2>
       <p>
-        Aceptamos Yape, Plin y tarjeta. Los pagos con Yape/Plin se coordinan
-        manualmente con nuestro equipo tras registrar el pedido. Tu pedido
-        pasa a &ldquo;pago verificado&rdquo; solo después de que confirmemos la
-        recepción del pago.
+        Aceptamos Yape, Plin y tarjetas de crédito o débito a través de
+        nuestra pasarela de pagos (PagoEfectivo / Izipay), que procesa tu
+        pago de forma inmediata. Tu pedido pasa a &ldquo;pago verificado&rdquo;
+        automáticamente en cuanto la pasarela confirma el pago.
       </p>
 
       <h2>5. Envío y entrega</h2>
