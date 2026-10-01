@@ -193,7 +193,7 @@ export const translations: Record<Locale, Translations> = {
       testimonials: {
         alejandra: {
           name: 'Alejandra',
-          location: 'Estados Unidos',
+          location: 'Lima, Perú',
           review: 'Pude enviarle regalos a mi familia en muy poco tiempo y con un solo pago. Todo mucho más simple de lo que esperaba.',
         },
         cesar: {
@@ -303,7 +303,7 @@ export const translations: Record<Locale, Translations> = {
       testimonials: {
         alejandra: {
           name: 'Alejandra',
-          location: 'United States',
+          location: 'Lima, Peru',
           review: 'I was able to send gifts to my family in very little time, with a single payment. Much simpler than I expected.',
         },
         cesar: {
@@ -413,7 +413,7 @@ export const translations: Record<Locale, Translations> = {
       testimonials: {
         alejandra: {
           name: 'Alejandra',
-          location: 'Estados Unidos',
+          location: 'Lima, Peru',
           review: 'Consegui enviar presentes para minha família em muito pouco tempo, com um único pagamento. Tudo muito mais simples do que eu esperava.',
         },
         cesar: {
