@@ -186,7 +186,7 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="bg-gray-50 py-20">
+      <section id="como-funciona" className="bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -328,28 +328,68 @@ export default function Home() {
             <div>
               <h3 className="font-semibold mb-4">{t.footer.product.title}</h3>
               <ul className="space-y-2 text-gray-400">
-                <li>{t.footer.product.howItWorks}</li>
-                <li>{t.footer.product.pricing}</li>
-                <li>{t.footer.product.chromeExtension}</li>
-                <li>{t.footer.product.mobileApp}</li>
+                <li>
+                  <Link href="/#como-funciona" className="hover:text-white">
+                    {t.footer.product.howItWorks}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/precios" className="hover:text-white">
+                    {t.footer.product.pricing}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/extension" className="hover:text-white">
+                    {t.footer.product.chromeExtension}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/app-movil" className="hover:text-white">
+                    {t.footer.product.mobileApp}
+                  </Link>
+                </li>
               </ul>
             </div>
-            
+
             <div>
               <h3 className="font-semibold mb-4">{t.footer.support.title}</h3>
               <ul className="space-y-2 text-gray-400">
-                <li>{t.footer.support.helpCenter}</li>
-                <li>{t.footer.support.contact}</li>
-                <li>{t.footer.support.shipping}</li>
-                <li>{t.footer.support.returns}</li>
+                <li>
+                  <Link href="/ayuda" className="hover:text-white">
+                    {t.footer.support.helpCenter}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contacto" className="hover:text-white">
+                    {t.footer.support.contact}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/envios" className="hover:text-white">
+                    {t.footer.support.shipping}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/devoluciones" className="hover:text-white">
+                    {t.footer.support.returns}
+                  </Link>
+                </li>
               </ul>
             </div>
-            
+
             <div>
               <h3 className="font-semibold mb-4">{t.footer.company.title}</h3>
               <ul className="space-y-2 text-gray-400">
-                <li>{t.footer.company.about}</li>
-                <li>{t.footer.company.careers}</li>
+                <li>
+                  <Link href="/nosotros" className="hover:text-white">
+                    {t.footer.company.about}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/carreras" className="hover:text-white">
+                    {t.footer.company.careers}
+                  </Link>
+                </li>
                 <li>
                   <Link href="/privacidad" className="hover:text-white">
                     {t.footer.company.privacy}
