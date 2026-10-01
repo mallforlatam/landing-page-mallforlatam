@@ -64,12 +64,6 @@ export default function CookiesPolicyPage() {
         Si tienes preguntas sobre el uso de cookies, escríbenos a{' '}
         <a href="mailto:privacidad@mallforlatam.com">privacidad@mallforlatam.com</a>.
       </p>
-
-      <p className="text-sm text-gray-400 mt-6">
-        Nota: este documento es un borrador inicial redactado para la etapa
-        beta de Mall for Latam, y se actualizará si se incorporan nuevas
-        herramientas de analítica o marketing.
-      </p>
     </LegalPage>
   );
 }

@@ -107,13 +107,6 @@ export default function TermsPage() {
         Para consultas sobre estos términos, escríbenos a{' '}
         <a href="mailto:soporte@mallforlatam.com">soporte@mallforlatam.com</a>.
       </p>
-
-      <p className="text-sm text-gray-400 mt-6">
-        Nota: este documento es un borrador inicial redactado para la etapa
-        beta de Mall for Latam. Antes del lanzamiento público recomendamos
-        que sea revisado por un asesor legal, y que se complete con la razón
-        social, RUC/identificación fiscal y domicilio legal de la empresa.
-      </p>
     </LegalPage>
   );
 }

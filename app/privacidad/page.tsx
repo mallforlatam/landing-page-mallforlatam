@@ -112,13 +112,6 @@ export default function PrivacyPolicyPage() {
         Si tienes preguntas sobre esta política, escríbenos a{' '}
         <a href="mailto:privacidad@mallforlatam.com">privacidad@mallforlatam.com</a>.
       </p>
-
-      <p className="text-sm text-gray-400 mt-6">
-        Nota: este documento es un borrador inicial redactado para la etapa
-        beta de Mall for Latam. Antes del lanzamiento público recomendamos
-        que sea revisado por un asesor legal, y que se complete con la razón
-        social, RUC/identificación fiscal y domicilio legal de la empresa.
-      </p>
     </LegalPage>
   );
 }

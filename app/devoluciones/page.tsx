@@ -49,12 +49,6 @@ export default function ReturnsPage() {
         (producto comprado, consolidado o despachado) no son reembolsables,
         salvo que el problema se deba a un error de nuestra parte.
       </p>
-
-      <p className="text-sm text-gray-400 mt-6">
-        Nota: este documento es un borrador inicial redactado para la etapa
-        beta de Mall for Latam. Antes del lanzamiento público recomendamos
-        que sea revisado por un asesor legal.
-      </p>
     </LegalPage>
   );
 }
