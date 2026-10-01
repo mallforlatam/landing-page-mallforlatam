@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { LegalPage } from '@/components/legal-page';
+import { LEGAL } from '@/lib/legal';
 
 export const metadata: Metadata = {
   title: 'Política de Privacidad — Mall for Latam',
@@ -8,13 +9,20 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <LegalPage title="Política de Privacidad" updatedAt="30 de septiembre de 2026">
+    <LegalPage title="Política de Privacidad" updatedAt="1 de octubre de 2026">
       <p>
         En Mall for Latam (&ldquo;M4L&rdquo;, &ldquo;nosotros&rdquo;) te ayudamos a comprar en tiendas
         internacionales (como Amazon, eBay, Walmart, Shein, Tommy Hilfiger y
         Jomashop) y a recibir tus productos en Latinoamérica, pagando en tu
         moneda local. Esta política explica qué datos recopilamos, para qué los
         usamos y qué derechos tienes sobre ellos.
+      </p>
+
+      <h2>Identificación del responsable</h2>
+      <p>
+        {LEGAL.titular}, con RUC {LEGAL.ruc}, que opera bajo el nombre
+        comercial «{LEGAL.nombreComercial}», con domicilio en{' '}
+        {LEGAL.direccion}.
       </p>
 
       <h2>1. Qué datos recopilamos</h2>

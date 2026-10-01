@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { LegalPage } from '@/components/legal-page';
+import { LEGAL } from '@/lib/legal';
 
 export const metadata: Metadata = {
   title: 'Términos y Condiciones — Mall for Latam',
@@ -8,12 +9,20 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalPage title="Términos y Condiciones" updatedAt="30 de septiembre de 2026">
+    <LegalPage title="Términos y Condiciones" updatedAt="1 de octubre de 2026">
       <p>
         Estos Términos y Condiciones regulan el uso de Mall for Latam (&ldquo;M4L&rdquo;),
         la extensión de Chrome y el dashboard en{' '}
         <a href="https://app.mallforlatam.com">app.mallforlatam.com</a>. Al
         crear una cuenta o usar nuestros servicios, aceptas estos términos.
+      </p>
+
+      <h2>Identificación del responsable</h2>
+      <p>
+        {LEGAL.titular}, con RUC {LEGAL.ruc}, que opera bajo el nombre
+        comercial «{LEGAL.nombreComercial}», con domicilio en{' '}
+        {LEGAL.direccion}, es la parte prestadora del servicio y contratante
+        frente al usuario bajo estos Términos y Condiciones.
       </p>
 
       <h2>1. Qué es Mall for Latam</h2>

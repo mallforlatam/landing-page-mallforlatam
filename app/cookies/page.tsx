@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { LegalPage } from '@/components/legal-page';
+import { LEGAL } from '@/lib/legal';
 
 export const metadata: Metadata = {
   title: 'Política de Cookies — Mall for Latam',
@@ -8,12 +9,19 @@ export const metadata: Metadata = {
 
 export default function CookiesPolicyPage() {
   return (
-    <LegalPage title="Política de Cookies" updatedAt="30 de septiembre de 2026">
+    <LegalPage title="Política de Cookies" updatedAt="1 de octubre de 2026">
       <p>
         Esta página explica qué cookies y tecnologías de almacenamiento
         similares usa Mall for Latam en este sitio, en el dashboard
         (<a href="https://app.mallforlatam.com">app.mallforlatam.com</a>) y en
         nuestra extensión de Chrome.
+      </p>
+
+      <h2>Identificación del responsable</h2>
+      <p>
+        {LEGAL.titular}, con RUC {LEGAL.ruc}, que opera bajo el nombre
+        comercial «{LEGAL.nombreComercial}», con domicilio en{' '}
+        {LEGAL.direccion}.
       </p>
 
       <h2>1. Cookies esenciales</h2>
