@@ -29,9 +29,7 @@ export interface Translations {
     joinWaitlist: string;
     stats: {
       stores: string;
-      countries: string;
-      uptime: string;
-      support: string;
+      orders: string;
     };
   };
   
@@ -78,19 +76,19 @@ export interface Translations {
   // Social Proof
   socialProof: {
     title: string;
-    reviewsCount: string;
+    subtitle: string;
     testimonials: {
-      maria: {
+      alejandra: {
         name: string;
         location: string;
         review: string;
       };
-      carlos: {
+      cesar: {
         name: string;
         location: string;
         review: string;
       };
-      ana: {
+      gloria: {
         name: string;
         location: string;
         review: string;
@@ -157,9 +155,7 @@ export const translations: Record<Locale, Translations> = {
       joinWaitlist: 'Unirse a Lista de Espera',
       stats: {
         stores: 'Tiendas Internacionales',
-        countries: 'Países Soportados',
-        uptime: 'Garantía de Disponibilidad',
-        support: 'Soporte al Cliente',
+        orders: 'Pedidos Entregados',
       },
     },
     features: {
@@ -167,7 +163,7 @@ export const translations: Record<Locale, Translations> = {
       subtitle: 'Eliminamos la complejidad de las compras internacionales con tecnología inteligente y experiencia local.',
       globalShopping: {
         title: 'Compras Globales',
-        description: 'Accede a productos de Amazon, AliExpress, Zara y más',
+        description: 'Accede a productos de Amazon, eBay, Walmart, Shein y más',
       },
       localPayments: {
         title: 'Pagos Locales',
@@ -199,29 +195,29 @@ export const translations: Record<Locale, Translations> = {
       },
     },
     socialProof: {
-      title: 'Confiado por miles en América Latina',
-      reviewsCount: '4.9/5 de más de 2,000 reseñas',
+      title: 'Lo que dicen quienes ya compraron con nosotros',
+      subtitle: 'Testimonios reales de nuestros primeros compradores.',
       testimonials: {
-        maria: {
-          name: 'María González',
+        alejandra: {
+          name: 'Alejandra',
+          location: 'Estados Unidos',
+          review: 'Pude enviarle regalos a mi familia en muy poco tiempo y con un solo pago. Todo mucho más simple de lo que esperaba.',
+        },
+        cesar: {
+          name: 'César',
           location: 'Lima, Perú',
-          review: '¡Finalmente puedo comprar en Amazon US con mi tarjeta local. El proceso es muy fluido!',
+          review: 'Compré productos que no encontraba en mi ciudad. Mall for Latam me los consiguió sin complicaciones.',
         },
-        carlos: {
-          name: 'Carlos Mendoza',
-          location: 'Bogotá, Colombia',
-          review: 'Me ahorré cientos en costos de envío consolidando mis pedidos. ¡Muy recomendado!',
-        },
-        ana: {
-          name: 'Ana Silva',
-          location: 'São Paulo, Brasil',
-          review: 'La extensión de Chrome hace que comprar sea muy fácil. ¡Solo haz clic y agrega a mi carrito Mall!',
+        gloria: {
+          name: 'Gloria',
+          location: 'Trujillo, Perú',
+          review: 'Adquirí productos de distintas marcas y llegaron muy rápido a mi ciudad. Lo mejor es que pagué con Yape, sin complicaciones.',
         },
       },
     },
     cta: {
       title: 'Empieza hoy a comprar globalmente',
-      subtitle: 'Únete a miles de latinoamericanos que ya están comprando de manera más inteligente con Mall for Latam.',
+      subtitle: 'Únete a los latinoamericanos que ya están comprando de manera más inteligente con Mall for Latam.',
       joinBeta: 'Unirse al Programa Beta',
       downloadExtension: 'Descargar Extensión de Chrome',
       downloadExtensionBadge: 'Próximamente',
@@ -273,9 +269,7 @@ export const translations: Record<Locale, Translations> = {
       joinWaitlist: 'Join Waitlist',
       stats: {
         stores: 'International Stores',
-        countries: 'Countries Supported',
-        uptime: 'Uptime Guarantee',
-        support: 'Customer Support',
+        orders: 'Orders Delivered',
       },
     },
     features: {
@@ -283,7 +277,7 @@ export const translations: Record<Locale, Translations> = {
       subtitle: 'We eliminate the complexity of international shopping with smart technology and local expertise.',
       globalShopping: {
         title: 'Global Shopping',
-        description: 'Access products from Amazon, AliExpress, Zara and more',
+        description: 'Access products from Amazon, eBay, Walmart, Shein and more',
       },
       localPayments: {
         title: 'Local Payments',
@@ -315,29 +309,29 @@ export const translations: Record<Locale, Translations> = {
       },
     },
     socialProof: {
-      title: 'Trusted by thousands in Latin America',
-      reviewsCount: '4.9/5 from 2,000+ reviews',
+      title: 'What people who already bought with us are saying',
+      subtitle: 'Real testimonials from our first buyers.',
       testimonials: {
-        maria: {
-          name: 'María González',
+        alejandra: {
+          name: 'Alejandra',
+          location: 'United States',
+          review: 'I was able to send gifts to my family in very little time, with a single payment. Much simpler than I expected.',
+        },
+        cesar: {
+          name: 'César',
           location: 'Lima, Peru',
-          review: 'Finally I can buy from Amazon US with my local card. The process is so smooth!',
+          review: "I bought products I couldn't find in my city. Mall for Latam got them for me without any hassle.",
         },
-        carlos: {
-          name: 'Carlos Mendoza',
-          location: 'Bogotá, Colombia',
-          review: 'Saved me hundreds on shipping costs by consolidating my orders. Highly recommend!',
-        },
-        ana: {
-          name: 'Ana Silva',
-          location: 'São Paulo, Brazil',
-          review: 'The Chrome extension makes shopping so easy. Just click and add to my Mall cart!',
+        gloria: {
+          name: 'Gloria',
+          location: 'Trujillo, Peru',
+          review: 'I got products from different brands and they arrived very fast. Best part: I paid with Yape, no hassle at all.',
         },
       },
     },
     cta: {
       title: 'Start shopping globally today',
-      subtitle: 'Join thousands of Latin Americans who are already shopping smarter with Mall for Latam.',
+      subtitle: 'Join the Latin Americans who are already shopping smarter with Mall for Latam.',
       joinBeta: 'Join Beta Program',
       downloadExtension: 'Download Chrome Extension',
       downloadExtensionBadge: 'Coming soon',
@@ -389,9 +383,7 @@ export const translations: Record<Locale, Translations> = {
       joinWaitlist: 'Entrar na Lista de Espera',
       stats: {
         stores: 'Lojas Internacionais',
-        countries: 'Países Suportados',
-        uptime: 'Garantia de Disponibilidade',
-        support: 'Suporte ao Cliente',
+        orders: 'Pedidos Entregues',
       },
     },
     features: {
@@ -399,7 +391,7 @@ export const translations: Record<Locale, Translations> = {
       subtitle: 'Eliminamos a complexidade das compras internacionais com tecnologia inteligente e expertise local.',
       globalShopping: {
         title: 'Compras Globais',
-        description: 'Acesse produtos da Amazon, AliExpress, Zara e mais',
+        description: 'Acesse produtos da Amazon, eBay, Walmart, Shein e mais',
       },
       localPayments: {
         title: 'Pagamentos Locais',
@@ -431,29 +423,29 @@ export const translations: Record<Locale, Translations> = {
       },
     },
     socialProof: {
-      title: 'Confiado por milhares na América Latina',
-      reviewsCount: '4.9/5 de mais de 2.000 avaliações',
+      title: 'O que dizem quem já comprou com a gente',
+      subtitle: 'Depoimentos reais dos nossos primeiros compradores.',
       testimonials: {
-        maria: {
-          name: 'María González',
+        alejandra: {
+          name: 'Alejandra',
+          location: 'Estados Unidos',
+          review: 'Consegui enviar presentes para minha família em muito pouco tempo, com um único pagamento. Tudo muito mais simples do que eu esperava.',
+        },
+        cesar: {
+          name: 'César',
           location: 'Lima, Peru',
-          review: 'Finalmente posso comprar na Amazon US com meu cartão local. O processo é muito fluido!',
+          review: 'Comprei produtos que não encontrava na minha cidade. A Mall for Latam conseguiu para mim sem complicações.',
         },
-        carlos: {
-          name: 'Carlos Mendoza',
-          location: 'Bogotá, Colômbia',
-          review: 'Economizei centenas em custos de frete consolidando meus pedidos. Altamente recomendado!',
-        },
-        ana: {
-          name: 'Ana Silva',
-          location: 'São Paulo, Brasil',
-          review: 'A extensão do Chrome torna as compras muito fáceis. Apenas clique e adicione ao meu carrinho Mall!',
+        gloria: {
+          name: 'Gloria',
+          location: 'Trujillo, Peru',
+          review: 'Adquiri produtos de marcas diferentes e chegaram muito rápido na minha cidade. O melhor é que paguei com Yape, sem complicações.',
         },
       },
     },
     cta: {
       title: 'Comece a comprar globalmente hoje',
-      subtitle: 'Junte-se a milhares de latino-americanos que já estão comprando de forma mais inteligente com Mall for Latam.',
+      subtitle: 'Junte-se aos latino-americanos que já estão comprando de forma mais inteligente com Mall for Latam.',
       joinBeta: 'Entrar no Programa Beta',
       downloadExtension: 'Baixar Extensão do Chrome',
       downloadExtensionBadge: 'Em breve',

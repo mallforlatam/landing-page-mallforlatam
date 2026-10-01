@@ -17,9 +17,9 @@ interface LanguageSelectorProps {
 }
 
 const languages = [
-  { code: 'es' as Locale, name: 'Español', flag: '🇪🇸' },
-  { code: 'en' as Locale, name: 'English', flag: '🇺🇸' },
-  { code: 'pt' as Locale, name: 'Português', flag: '🇧🇷' },
+  { code: 'es' as Locale, name: 'Español' },
+  { code: 'en' as Locale, name: 'English' },
+  { code: 'pt' as Locale, name: 'Português' },
 ];
 
 export function LanguageSelector({ currentLocale, onLocaleChange }: LanguageSelectorProps) {
@@ -30,7 +30,6 @@ export function LanguageSelector({ currentLocale, onLocaleChange }: LanguageSele
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="sm" className="gap-2">
           <Globe className="h-4 w-4" />
-          <span className="hidden sm:inline">{currentLanguage.flag}</span>
           <span className="text-sm font-medium">{currentLanguage.code.toUpperCase()}</span>
         </Button>
       </DropdownMenuTrigger>
@@ -41,12 +40,9 @@ export function LanguageSelector({ currentLocale, onLocaleChange }: LanguageSele
             onClick={() => onLocaleChange(language.code)}
             className="flex items-center justify-between cursor-pointer"
           >
-            <div className="flex items-center gap-2">
-              <span>{language.flag}</span>
-              <span>{language.name}</span>
-            </div>
+            <span>{language.name}</span>
             {currentLocale === language.code && (
-              <Check className="h-4 w-4 text-blue-600" />
+              <Check className="h-4 w-4 text-brand-blue" />
             )}
           </DropdownMenuItem>
         ))}

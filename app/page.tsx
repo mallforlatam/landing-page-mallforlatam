@@ -54,10 +54,8 @@ export default function Home() {
   ];
 
   const stats = [
-    { value: "50+", label: t.hero.stats.stores },
-    { value: "15", label: t.hero.stats.countries },
-    { value: "99.9%", label: t.hero.stats.uptime },
-    { value: "24/7", label: t.hero.stats.support }
+    { value: "+10", label: t.hero.stats.stores },
+    { value: "+50", label: t.hero.stats.orders }
   ];
 
   const handleJoinWaitlist = async () => {
@@ -103,9 +101,6 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-2 sm:gap-4 shrink-0">
             <LanguageSelector currentLocale={locale} onLocaleChange={changeLocale} />
-            <Button variant="ghost" className="px-2 text-sm sm:px-4 sm:text-base" asChild>
-              <a href="https://app.mallforlatam.com">{t.nav.login}</a>
-            </Button>
             <Button className="px-3 py-2 text-sm sm:px-4 sm:py-2 sm:text-base" asChild>
               <a href="https://app.mallforlatam.com">{t.nav.getStarted}</a>
             </Button>
@@ -242,30 +237,25 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {t.socialProof.title}
           </h2>
-          <div className="flex justify-center items-center space-x-1 mb-4">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-            ))}
-            <span className="ml-2 text-gray-600">{t.socialProof.reviewsCount}</span>
-          </div>
+          <p className="text-gray-600">{t.socialProof.subtitle}</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
-              name: t.socialProof.testimonials.maria.name,
-              location: t.socialProof.testimonials.maria.location,
-              review: t.socialProof.testimonials.maria.review
+              name: t.socialProof.testimonials.alejandra.name,
+              location: t.socialProof.testimonials.alejandra.location,
+              review: t.socialProof.testimonials.alejandra.review
             },
             {
-              name: t.socialProof.testimonials.carlos.name,
-              location: t.socialProof.testimonials.carlos.location,
-              review: t.socialProof.testimonials.carlos.review
+              name: t.socialProof.testimonials.cesar.name,
+              location: t.socialProof.testimonials.cesar.location,
+              review: t.socialProof.testimonials.cesar.review
             },
             {
-              name: t.socialProof.testimonials.ana.name,
-              location: t.socialProof.testimonials.ana.location,
-              review: t.socialProof.testimonials.ana.review
+              name: t.socialProof.testimonials.gloria.name,
+              location: t.socialProof.testimonials.gloria.location,
+              review: t.socialProof.testimonials.gloria.review
             }
           ].map((testimonial, index) => (
             <Card key={index} className="border-0 shadow-lg">
