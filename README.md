@@ -4,6 +4,38 @@
 
 Landing page del MVP de Mall for Latam. Sitio público en Next.js que presenta la propuesta de valor “Compra globalmente, paga localmente”, formulario de waitlist y contenido SEO multilenguaje (ES/EN/PT).
 
+## 📝 Changelog
+
+### v2 — Rebranding, contenido real y páginas legales (30 sep 2026)
+
+**Marca**
+- Colores corporativos (`#5b66ff` / `#cc00ff`) en lugar del gradiente genérico azul/morado/rosa.
+- Logos reales (header, footer, favicon, apple-touch-icon e imagen Open Graph generada dinámicamente) en vez del ícono placeholder.
+
+**Navegación y CTAs**
+- Un solo botón "Comenzar" en el header (antes duplicaba "Iniciar Sesión" + "Comenzar" hacia el mismo destino).
+- "Comenzar" / "Unirse al Programa Beta" enlazan al dashboard (`app.mallforlatam.com`).
+- Botón "Descargar Extensión de Chrome" con estado "Próximamente" (aviso vía toast) mientras la extensión está en revisión en la Chrome Web Store.
+- Selector de idioma simplificado: solo ícono de globo + código (ES/EN/PT), sin banderas.
+
+**Contenido honesto**
+- Reemplazadas las cifras inventadas (50+ tiendas, 15 países, 99.9% uptime, "4.9/5 de 2,000+ reseñas") por cifras reales (+10 tiendas, +50 pedidos entregados).
+- Reemplazados los 3 testimonios ficticios por testimonios reales de clientes (Alejandra, César, Gloria), traducidos a los 3 idiomas.
+- Corregida la mención de tiendas no soportadas (AliExpress, Zara) por las tiendas reales integradas (Amazon, eBay, Walmart, Shein, Tommy Hilfiger, Jomashop).
+
+**Páginas nuevas (antes texto muerto en el footer)**
+- Legales: Política de Privacidad, Términos y Condiciones, Política de Cookies.
+- Producto: Precios (comisión 15%, envío nacional $10, límite $200/pedido), Extensión de Chrome, App Móvil (honesto: aún no existe, está en el roadmap).
+- Soporte: Centro de Ayuda (FAQ), Contáctanos, Información de Envíos (ciclo de tracking M4L-00001-2026), Devoluciones.
+- Empresa: Acerca de Nosotros, Carreras (honesto: sin vacantes abiertas por ahora).
+- "Cómo funciona" ahora enlaza a la sección correspondiente del home en vez de ser texto sin acción.
+
+**Accesibilidad y SEO**
+- Label visible en el input de email del hero (antes solo placeholder).
+- "Iniciar Sesión"/"Comenzar" ya no desaparece en mobile.
+- Metadata Open Graph/Twitter + `viewport` export (antes ausentes).
+- Limpieza de repo: eliminado el scaffold duplicado de Bolt.new (`project_mall4latam/`, `.bolt/`).
+
 ## 🏗️ Arquitectura
 
 ### Arquitectura de Microservicios (visión producto)
