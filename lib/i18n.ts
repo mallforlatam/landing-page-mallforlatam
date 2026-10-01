@@ -24,9 +24,6 @@ export interface Translations {
     badge: string;
     title: string;
     subtitle: string;
-    emailLabel: string;
-    emailPlaceholder: string;
-    joinWaitlist: string;
     stats: {
       stores: string;
       orders: string;
@@ -100,7 +97,6 @@ export interface Translations {
   cta: {
     title: string;
     subtitle: string;
-    joinBeta: string;
     downloadExtension: string;
     downloadExtensionBadge: string;
     downloadExtensionToast: string;
@@ -150,9 +146,6 @@ export const translations: Record<Locale, Translations> = {
       badge: 'Ahora en Beta - Únete a la Revolución',
       title: 'Compra Globalmente,\nPaga Localmente',
       subtitle: 'Accede a millones de productos internacionales con métodos de pago locales, envíos consolidados y precios transparentes. No más barreras para las compras globales.',
-      emailLabel: 'Correo electrónico',
-      emailPlaceholder: 'Ingresa tu email',
-      joinWaitlist: 'Unirse a Lista de Espera',
       stats: {
         stores: 'Tiendas Internacionales',
         orders: 'Pedidos Entregados',
@@ -218,7 +211,6 @@ export const translations: Record<Locale, Translations> = {
     cta: {
       title: 'Empieza hoy a comprar globalmente',
       subtitle: 'Únete a los latinoamericanos que ya están comprando de manera más inteligente con Mall for Latam.',
-      joinBeta: 'Unirse al Programa Beta',
       downloadExtension: 'Descargar Extensión de Chrome',
       downloadExtensionBadge: 'Próximamente',
       downloadExtensionToast: 'La extensión está en revisión en Chrome Web Store. ¡Muy pronto podrás descargarla!',
@@ -264,9 +256,6 @@ export const translations: Record<Locale, Translations> = {
       badge: 'Now in Beta - Join the Revolution',
       title: 'Shop Globally,\nPay Locally',
       subtitle: 'Access millions of international products with local payment methods, consolidated shipping, and transparent pricing. No more barriers to global shopping.',
-      emailLabel: 'Email address',
-      emailPlaceholder: 'Enter your email',
-      joinWaitlist: 'Join Waitlist',
       stats: {
         stores: 'International Stores',
         orders: 'Orders Delivered',
@@ -332,7 +321,6 @@ export const translations: Record<Locale, Translations> = {
     cta: {
       title: 'Start shopping globally today',
       subtitle: 'Join the Latin Americans who are already shopping smarter with Mall for Latam.',
-      joinBeta: 'Join Beta Program',
       downloadExtension: 'Download Chrome Extension',
       downloadExtensionBadge: 'Coming soon',
       downloadExtensionToast: 'The extension is under review on the Chrome Web Store. You will be able to download it very soon!',
@@ -378,9 +366,6 @@ export const translations: Record<Locale, Translations> = {
       badge: 'Agora em Beta - Junte-se à Revolução',
       title: 'Compre Globalmente,\nPague Localmente',
       subtitle: 'Acesse milhões de produtos internacionais com métodos de pagamento locais, frete consolidado e preços transparentes. Chega de barreiras para compras globais.',
-      emailLabel: 'E-mail',
-      emailPlaceholder: 'Digite seu email',
-      joinWaitlist: 'Entrar na Lista de Espera',
       stats: {
         stores: 'Lojas Internacionais',
         orders: 'Pedidos Entregues',
@@ -446,7 +431,6 @@ export const translations: Record<Locale, Translations> = {
     cta: {
       title: 'Comece a comprar globalmente hoje',
       subtitle: 'Junte-se aos latino-americanos que já estão comprando de forma mais inteligente com Mall for Latam.',
-      joinBeta: 'Entrar no Programa Beta',
       downloadExtension: 'Baixar Extensão do Chrome',
       downloadExtensionBadge: 'Em breve',
       downloadExtensionToast: 'A extensão está em revisão na Chrome Web Store. Você poderá baixá-la muito em breve!',

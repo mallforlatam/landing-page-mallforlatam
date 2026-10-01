@@ -1,32 +1,44 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
 import { LanguageSelector } from '@/components/language-selector';
 import { useLocale } from '@/hooks/use-locale';
-import { getTranslations } from '@/lib/i18n';
+import { getTranslations, type Translations } from '@/lib/i18n';
 import { toast } from 'sonner';
-import { 
-  ShoppingCart, 
-  Globe, 
-  CreditCard, 
-  Truck, 
-  Shield, 
+import {
+  ShoppingCart,
+  Globe,
+  CreditCard,
+  Truck,
+  Shield,
   Zap,
   Search,
   Star,
   ArrowRight,
-  CheckCircle
+  Chrome
 } from 'lucide-react';
 
+function DownloadExtensionButton({ t }: { t: Translations }) {
+  return (
+    <Button
+      onClick={() => toast.info(t.cta.downloadExtensionToast)}
+      className="h-auto max-w-full rounded-full bg-slate-900 text-white hover:bg-slate-800 gap-1 px-3 py-2 text-xs sm:gap-2 sm:px-8 sm:py-4 sm:text-lg"
+    >
+      <Chrome className="h-3.5 w-3.5 shrink-0 sm:h-5 sm:w-5" aria-hidden="true" />
+      <span className="whitespace-nowrap">{t.cta.downloadExtension}</span>
+      <Badge className="hidden shrink-0 bg-white/15 text-white hover:bg-white/15 sm:inline-flex sm:text-xs">
+        {t.cta.downloadExtensionBadge}
+      </Badge>
+      <ArrowRight className="hidden h-3.5 w-3.5 shrink-0 sm:inline sm:h-4 sm:w-4" aria-hidden="true" />
+    </Button>
+  );
+}
+
 export default function Home() {
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const { locale, changeLocale } = useLocale();
   const t = getTranslations(locale);
 
@@ -57,32 +69,6 @@ export default function Home() {
     { value: "+10", label: t.hero.stats.stores },
     { value: "+50", label: t.hero.stats.orders }
   ];
-
-  const handleJoinWaitlist = async () => {
-    if (!email) {
-      toast.error('Por favor ingresa tu email.');
-      return;
-    }
-    setIsSubmitting(true);
-    try {
-      const res = await fetch('/api/waitlist', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
-      });
-      if (res.ok) {
-        toast.success('Te hemos agregado a la lista de espera.');
-        setEmail('');
-      } else {
-        const data = await res.json().catch(() => ({}));
-        toast.error(data?.error ?? 'No se pudo procesar tu registro.');
-      }
-    } catch (err) {
-      toast.error('Error de red. Inténtalo nuevamente.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
@@ -115,7 +101,7 @@ export default function Home() {
           {t.hero.badge}
         </Badge>
 
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-brand-blue to-brand-purple bg-clip-text text-transparent whitespace-pre-line">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-brand-blue to-brand-purple bg-clip-text text-transparent whitespace-pre-line">
           {t.hero.title}
         </h1>
 
@@ -124,23 +110,7 @@ export default function Home() {
         </p>
 
         <div className="flex flex-col items-center mb-12">
-          <label htmlFor="hero-email" className="mb-2 text-sm font-medium text-gray-700">
-            {t.hero.emailLabel}
-          </label>
-          <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-0">
-            <Input
-              id="hero-email"
-              type="email"
-              placeholder={t.hero.emailPlaceholder}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="sm:rounded-r-none min-w-[300px]"
-            />
-            <Button onClick={handleJoinWaitlist} disabled={isSubmitting || !email} className="sm:rounded-l-none bg-gradient-to-r from-brand-blue to-brand-purple hover:opacity-90">
-              {t.hero.joinWaitlist}
-              <ArrowRight className="h-4 w-4 ml-2" aria-hidden="true" />
-            </Button>
-          </div>
+          <DownloadExtensionButton t={t} />
         </div>
 
         <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-500">
@@ -286,24 +256,8 @@ export default function Home() {
             {t.cta.subtitle}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="bg-white text-brand-blue hover:bg-gray-100" asChild>
-              <a href="https://app.mallforlatam.com">
-                <CheckCircle className="h-5 w-5 mr-2" />
-                {t.cta.joinBeta}
-              </a>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-transparent border-white text-white hover:bg-white hover:text-brand-blue relative"
-              onClick={() => toast.info(t.cta.downloadExtensionToast)}
-            >
-              {t.cta.downloadExtension}
-              <Badge className="ml-2 bg-white/20 text-white hover:bg-white/20">
-                {t.cta.downloadExtensionBadge}
-              </Badge>
-            </Button>
+          <div className="flex justify-center">
+            <DownloadExtensionButton t={t} />
           </div>
         </div>
       </section>
