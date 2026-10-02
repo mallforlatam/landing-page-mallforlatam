@@ -39,26 +39,26 @@ export default function TermsPage() {
         <li>Agregas productos a tu carrito desde la extensión de Chrome, en las tiendas compatibles.</li>
         <li>Completas tu dirección de envío y confirmas el pago en el dashboard.</li>
         <li>El subtotal de productos de un mismo pedido no puede superar los $200 USD — es un límite operativo mientras estamos en etapa inicial.</li>
-        <li>Tu pago se valida automáticamente a través de nuestra pasarela de pagos, y te asignamos un código de guía único a tu pedido (formato M4L-00001-2026).</li>
+        <li>Verificamos tu pago y te asignamos un código de pedido único (formato M4L-00001-2026).</li>
         <li>Compramos los productos, los consolidamos en Miami y los enviamos a tu ciudad; puedes seguir el estado de tu envío desde el dashboard.</li>
       </ul>
 
       <h2>3. Precios y comisiones</h2>
       <p>
         El costo total de tu pedido incluye: el precio de los productos, una
-        comisión de servicio del 15% sobre ese subtotal, y una tarifa plana
-        de envío nacional (actualmente $10 USD, aprox. S/ 35) dentro de Perú.
-        El envío internacional de Miami a tu almacén de origen puede
-        calcularse por separado según el peso/volumen del paquete. Te
-        mostramos el total estimado en soles antes de confirmar el pago.
+        comisión de servicio del 15% sobre ese subtotal, una tarifa de envío
+        internacional (Miami → tu país) de $10 USD para paquetes de hasta 3.5
+        kg, y una tarifa plana de envío nacional (actualmente $10 USD, aprox.
+        S/ 35) dentro de Perú. Te mostramos el total estimado en soles antes
+        de confirmar el pago.
       </p>
 
       <h2>4. Pagos</h2>
       <p>
-        Aceptamos Yape, Plin y tarjetas de crédito o débito a través de
-        nuestra pasarela de pagos (PagoEfectivo / Izipay), que procesa tu
-        pago de forma inmediata. Tu pedido pasa a &ldquo;pago verificado&rdquo;
-        automáticamente en cuanto la pasarela confirma el pago.
+        Aceptamos Yape, Plin y tarjetas de crédito o débito. Nuestro equipo
+        verifica cada pago; en cuanto lo confirmamos, tu pedido pasa a
+        &ldquo;pago verificado&rdquo; y te asignamos tu código de pedido
+        único (formato M4L-00001-2026).
       </p>
 
       <h2>5. Envío y entrega</h2>
@@ -71,7 +71,24 @@ export default function TermsPage() {
         producto en la tienda de origen).
       </p>
 
-      <h2>6. Cancelaciones</h2>
+      <h2>6. Productos que no transportamos</h2>
+      <p>
+        Por disposición de Aduanas y de las normas de transporte aéreo, no
+        podemos gestionar la compra ni el envío de:
+      </p>
+      <ul>
+        <li>Productos inflamables</li>
+        <li>Armas, municiones y explosivos</li>
+        <li>Perfumes: máximo 4 unidades por pedido</li>
+      </ul>
+      {/* TODO: Lista pendiente de completar por César. No agregar restricciones por cuenta propia. */}
+      <p>
+        Si un pedido incluye productos no transportables, M4L lo notificará y
+        procederá con la devolución del importe correspondiente a tu mismo
+        método de pago en un plazo de 5 días hábiles.
+      </p>
+
+      <h2>7. Cancelaciones</h2>
       <p>
         Puedes solicitar la cancelación de tu pedido antes de que confirmemos
         la compra en la tienda de origen. Una vez comprado el producto, la
@@ -79,7 +96,7 @@ export default function TermsPage() {
         podría no ser posible o generar costos adicionales.
       </p>
 
-      <h2>7. Uso aceptable</h2>
+      <h2>8. Uso aceptable</h2>
       <p>
         No debes usar M4L para comprar productos ilegales, falsificados, o
         prohibidos de importar a tu país. Nos reservamos el derecho de
@@ -87,7 +104,7 @@ export default function TermsPage() {
         tiendas de origen.
       </p>
 
-      <h2>8. Limitación de responsabilidad</h2>
+      <h2>9. Limitación de responsabilidad</h2>
       <p>
         M4L actúa como intermediario de compra y envío. No somos responsables
         por defectos de fabricación de los productos (sujetos a la garantía
@@ -97,21 +114,21 @@ export default function TermsPage() {
         desarrollándolo.
       </p>
 
-      <h2>9. Cambios a estos términos</h2>
+      <h2>10. Cambios a estos términos</h2>
       <p>
         Podemos actualizar estos términos conforme evoluciona el servicio.
         El uso continuado de M4L después de un cambio implica tu aceptación
         de los nuevos términos.
       </p>
 
-      <h2>10. Ley aplicable</h2>
+      <h2>11. Ley aplicable</h2>
       <p>
         Estos términos se rigen por las leyes de la República del Perú.
         Cualquier controversia se resolverá ante los tribunales competentes
         de Lima, Perú, salvo que la ley aplicable disponga lo contrario.
       </p>
 
-      <h2>11. Contacto</h2>
+      <h2>12. Contacto</h2>
       <p>
         Para consultas sobre estos términos, escríbenos a{' '}
         <a href="mailto:soporte@mallforlatam.com">soporte@mallforlatam.com</a>.
