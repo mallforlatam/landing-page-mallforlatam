@@ -46,15 +46,14 @@ export default function PrivacyPolicyPage() {
         <li>
           <strong>Datos del pedido:</strong> productos comprados, montos,
           método de pago elegido (Yape, Plin o tarjeta) y el estado de tu
-          envío, incluyendo el código de guía que te asignamos.
+          envío, incluyendo el código de pedido que te asignamos.
         </li>
       </ul>
       <p>
         <strong>No almacenamos datos de tarjetas ni cuentas bancarias.</strong>{' '}
-        Pagas con Yape, Plin y tarjetas de crédito o débito a través de
-        nuestra pasarela de pagos (PagoEfectivo / Izipay), que procesa tu
-        pago de forma inmediata — M4L nunca ve ni guarda el número completo
-        de tu tarjeta ni tus datos bancarios.
+        Pagas con Yape, Plin o tarjeta, y nuestro equipo verifica cada pago
+        manualmente — M4L nunca ve ni guarda el número completo de tu
+        tarjeta ni tus datos bancarios.
       </p>
 
       <h2>2. Para qué usamos tus datos</h2>

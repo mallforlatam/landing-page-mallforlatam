@@ -58,10 +58,10 @@ export default function PricingPage() {
       <h2>Métodos de pago</h2>
       <p>
         Aceptamos <strong>Yape</strong>, <strong>Plin</strong> y{' '}
-        <strong>tarjetas de crédito o débito</strong> a través de nuestra
-        pasarela de pagos (PagoEfectivo / Izipay), que procesa tu pago de
-        forma inmediata. No almacenamos datos de tu tarjeta — más detalles en
-        nuestra <a href="/privacidad">Política de Privacidad</a>.
+        <strong>tarjetas de crédito o débito</strong>. Nuestro equipo
+        verifica cada pago y te confirma por este medio. No almacenamos
+        datos de tu tarjeta — más detalles en nuestra{' '}
+        <a href="/privacidad">Política de Privacidad</a>.
       </p>
     </LegalPage>
   );
