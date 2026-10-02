@@ -35,7 +35,9 @@ export default function PricingPage() {
         <li>
           <strong>Envío internacional (Miami → Perú):</strong> tarifa plana
           de $10 USD para paquetes de hasta 3.5 kg, incluida en el total que
-          ves antes de confirmar el pago.
+          ves antes de confirmar el pago. Para pedidos que superen ese peso,
+          coordinamos contigo el costo adicional antes de confirmar la
+          compra.
         </li>
       </ul>
 

@@ -49,17 +49,17 @@ export default function TermsPage() {
         comisión de servicio del 15% sobre ese subtotal, una tarifa de envío
         internacional (Miami → tu país) de $10 USD para paquetes de hasta 3.5
         kg, y una tarifa plana de envío nacional (actualmente $10 USD, aprox.
-        S/ 35) dentro de Perú. Te mostramos el total estimado en soles antes
-        de confirmar el pago.
+        S/ 35) dentro de Perú. Para pedidos que superen los 3.5 kg,
+        coordinamos contigo el costo adicional antes de confirmar la compra.
+        Te mostramos el total estimado en soles antes de confirmar el pago.
       </p>
 
       <h2>4. Pagos</h2>
       <p>
         Aceptamos Yape, Plin y tarjetas de crédito o débito. Nuestro equipo
-        verifica cada pago, generalmente en unas pocas horas y nunca más de
-        24 horas; en cuanto lo confirmamos, tu pedido pasa a &ldquo;pago
-        verificado&rdquo; y se te asigna tu código de pedido (formato
-        M4L-00001-2026).
+        verifica cada pago en un plazo máximo de 48 horas hábiles; en cuanto
+        lo confirmamos, tu pedido pasa a &ldquo;pago verificado&rdquo; y se
+        te asigna tu código de pedido (formato M4L-00001-2026).
       </p>
 
       <h2>5. Envío y entrega</h2>
