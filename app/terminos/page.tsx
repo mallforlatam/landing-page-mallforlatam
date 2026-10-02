@@ -47,7 +47,7 @@ export default function TermsPage() {
       <p>
         El costo total de tu pedido incluye: el precio de los productos, una
         comisión de servicio del 15% sobre ese subtotal, una tarifa de envío
-        internacional (Miami → tu país) de $10 USD para paquetes de hasta 3.5
+        internacional (Miami → Perú) de $10 USD para paquetes de hasta 3.5
         kg, y una tarifa plana de envío nacional (actualmente $10 USD, aprox.
         S/ 35) dentro de Perú. Para pedidos que superen los 3.5 kg,
         coordinamos contigo el costo adicional antes de confirmar la compra.
