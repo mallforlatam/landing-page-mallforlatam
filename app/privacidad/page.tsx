@@ -52,8 +52,8 @@ export default function PrivacyPolicyPage() {
       <p>
         <strong>No almacenamos datos de tarjetas ni cuentas bancarias.</strong>{' '}
         Pagas con Yape, Plin o tarjeta, y nuestro equipo verifica cada pago
-        manualmente — M4L nunca ve ni guarda el número completo de tu
-        tarjeta ni tus datos bancarios.
+        — M4L nunca ve ni guarda el número completo de tu tarjeta ni tus
+        datos bancarios.
       </p>
 
       <h2>2. Para qué usamos tus datos</h2>

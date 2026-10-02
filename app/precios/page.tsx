@@ -33,9 +33,9 @@ export default function PricingPage() {
           tu casa, sin importar el departamento.
         </li>
         <li>
-          <strong>Envío internacional (Miami → Perú):</strong> se calcula
-          según el peso y volumen de tu paquete una vez consolidado; te lo
-          mostramos antes de que el paquete salga de Miami.
+          <strong>Envío internacional (Miami → Perú):</strong> tarifa plana
+          de $10 USD para paquetes de hasta 3.5 kg, incluida en el total que
+          ves antes de confirmar el pago.
         </li>
       </ul>
 

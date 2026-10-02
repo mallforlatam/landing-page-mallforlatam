@@ -56,9 +56,10 @@ export default function TermsPage() {
       <h2>4. Pagos</h2>
       <p>
         Aceptamos Yape, Plin y tarjetas de crédito o débito. Nuestro equipo
-        verifica cada pago; en cuanto lo confirmamos, tu pedido pasa a
-        &ldquo;pago verificado&rdquo; y te asignamos tu código de pedido
-        único (formato M4L-00001-2026).
+        verifica cada pago, generalmente en unas pocas horas y nunca más de
+        24 horas; en cuanto lo confirmamos, tu pedido pasa a &ldquo;pago
+        verificado&rdquo; y se te asigna tu código de pedido (formato
+        M4L-00001-2026).
       </p>
 
       <h2>5. Envío y entrega</h2>
