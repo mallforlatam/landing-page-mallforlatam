@@ -43,9 +43,9 @@ export default function ReturnsPage() {
         reclamo con la tienda de origen o el transportista correspondiente.
       </p>
 
-      <h2>Comisión de servicio y envío</h2>
+      <h2>Comisión de servicio, gastos operativos y envío</h2>
       <p>
-        La comisión de servicio y los costos de envío ya ejecutados
+        La comisión de servicio, los gastos operativos y los costos de envío ya ejecutados
         (producto comprado, consolidado o despachado) no son reembolsables,
         salvo que el problema se deba a un error de nuestra parte.
       </p>

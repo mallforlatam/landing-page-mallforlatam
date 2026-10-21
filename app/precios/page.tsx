@@ -28,6 +28,11 @@ export default function PricingPage() {
           y la coordinación de todo el proceso.
         </li>
         <li>
+          <strong>Gastos operativos ($5 USD por pedido):</strong> un monto
+          fijo que cubre los costos de procesar cada pedido, sin importar
+          cuántos productos incluya.
+        </li>
+        <li>
           <strong>Envío nacional (tarifa plana $10 USD, aprox. S/ 35):</strong>{' '}
           cubre el envío desde que el paquete llega a Perú hasta la puerta de
           tu casa, sin importar el departamento.

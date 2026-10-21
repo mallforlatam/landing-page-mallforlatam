@@ -38,7 +38,8 @@ export default function AboutPage() {
       <p>
         Nuestra extensión de Chrome te deja agregar productos de tus tiendas
         favoritas con un clic. Nuestro dashboard calcula el costo total por
-        adelantado — producto, comisión de servicio y envío — sin
+        adelantado — producto, comisión de servicio, gastos operativos y
+        envío — sin
         sorpresas. Y nuestro equipo se encarga de todo el proceso: compra,
         consolidación en Miami y envío hasta tu ciudad, con seguimiento en
         cada paso.

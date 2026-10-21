@@ -39,14 +39,16 @@ export default function TermsPage() {
         <li>Agregas productos a tu carrito desde la extensión de Chrome, en las tiendas compatibles.</li>
         <li>Completas tu dirección de envío y confirmas el pago en el dashboard.</li>
         <li>El subtotal de productos de un mismo pedido no puede superar los $200 USD — es un límite operativo mientras estamos en etapa inicial.</li>
-        <li>Verificamos tu pago y te asignamos un código de pedido único (formato M4L-00001-2026).</li>
+        <li>Al confirmar tu compra se te asigna un código de pedido único (formato M4L-00001-2026), que identifica tu pedido en todo el proceso: úsalo para consultar su estado y al enviar tu comprobante de pago.</li>
+        <li>Verificamos tu pago.</li>
         <li>Compramos los productos, los consolidamos en Miami y los enviamos a tu ciudad; puedes seguir el estado de tu envío desde el dashboard.</li>
       </ul>
 
       <h2>3. Precios y comisiones</h2>
       <p>
         El costo total de tu pedido incluye: el precio de los productos, una
-        comisión de servicio del 15% sobre ese subtotal, una tarifa de envío
+        comisión de servicio del 15% sobre ese subtotal, un cargo fijo de
+        gastos operativos de $5 USD por pedido, una tarifa de envío
         internacional (Miami → Perú) de $10 USD para paquetes de hasta 3.5
         kg, y una tarifa plana de envío nacional (actualmente $10 USD, aprox.
         S/ 35) dentro de Perú. Para pedidos que superen los 3.5 kg,
@@ -58,8 +60,8 @@ export default function TermsPage() {
       <p>
         Aceptamos Yape, Plin y tarjetas de crédito o débito. Nuestro equipo
         verifica cada pago en un plazo máximo de 48 horas hábiles; en cuanto
-        lo confirmamos, tu pedido pasa a &ldquo;pago verificado&rdquo; y se
-        te asigna tu código de pedido (formato M4L-00001-2026).
+        lo confirmamos, tu pedido pasa a &ldquo;pago verificado&rdquo;. Para
+        cualquier consulta sobre tu pago, indica tu código de pedido.
       </p>
 
       <h2>5. Envío y entrega</h2>
@@ -80,9 +82,27 @@ export default function TermsPage() {
       <ul>
         <li>Productos inflamables</li>
         <li>Armas, municiones y explosivos</li>
-        <li>Perfumes: máximo 4 unidades por pedido</li>
+        <li>Ropa y calzado usados</li>
+        <li>Autopartes usadas</li>
+        <li>Mercancía falsificada</li>
+        <li>Drogas</li>
+        <li>Bebidas fabricadas en el extranjero con la denominación &ldquo;Pisco&rdquo;</li>
+        <li>Medicamentos, salvo que cuentes con receta médica</li>
       </ul>
-      {/* TODO: Lista pendiente de completar por César. No agregar restricciones por cuenta propia. */}
+      {/* Lista basada en la indicación del equipo y en la guía de SUNAT de bienes prohibidos para courier. No agregar restricciones por cuenta propia. */}
+      <p>
+        Además, algunos productos los aceptamos con condiciones:
+      </p>
+      <ul>
+        <li>Perfumes: máximo 4 unidades por pedido.</li>
+        <li>Celulares y equipos con conexión WiFi.</li>
+      </ul>
+      <p>
+        Revisamos estos productos antes de comprarlos. Si alguno requiere un
+        trámite, una autorización o un costo adicional para ingresar al
+        país, te lo informamos y decides si continúas antes de que hagamos
+        la compra.
+      </p>
       <p>
         Si un pedido incluye productos no transportables, M4L lo notificará y
         procederá con la devolución del importe correspondiente a tu mismo
