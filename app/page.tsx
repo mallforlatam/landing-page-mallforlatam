@@ -11,10 +11,10 @@ import { getTranslations, type Translations } from '@/lib/i18n';
 import { toast } from 'sonner';
 import {
   ShoppingCart,
-  Globe,
+  Store,
   CreditCard,
   Truck,
-  Shield,
+  Tag,
   Zap,
   Search,
   Star,
@@ -22,18 +22,35 @@ import {
   Chrome
 } from 'lucide-react';
 
+// Pegar acá el enlace de la ficha en Chrome Web Store cuando la extensión
+// esté publicada. Mientras esté vacío, el botón avisa que llega pronto.
+const CHROME_WEB_STORE_URL = '';
+
+const BUTTON_CLASSES =
+  'h-auto max-w-full rounded-full bg-slate-900 text-white hover:bg-slate-800 gap-1 px-4 py-2.5 text-sm sm:gap-2 sm:px-8 sm:py-4 sm:text-lg';
+
 function DownloadExtensionButton({ t }: { t: Translations }) {
-  return (
-    <Button
-      onClick={() => toast.info(t.cta.downloadExtensionToast)}
-      className="h-auto max-w-full rounded-full bg-slate-900 text-white hover:bg-slate-800 gap-1 px-3 py-2 text-xs sm:gap-2 sm:px-8 sm:py-4 sm:text-lg"
-    >
-      <Chrome className="h-3.5 w-3.5 shrink-0 sm:h-5 sm:w-5" aria-hidden="true" />
+  const content = (
+    <>
+      <Chrome className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" aria-hidden="true" />
       <span className="whitespace-nowrap">{t.cta.downloadExtension}</span>
-      <Badge className="hidden shrink-0 bg-white/15 text-white hover:bg-white/15 sm:inline-flex sm:text-xs">
-        {t.cta.downloadExtensionBadge}
-      </Badge>
-      <ArrowRight className="hidden h-3.5 w-3.5 shrink-0 sm:inline sm:h-4 sm:w-4" aria-hidden="true" />
+      <ArrowRight className="h-4 w-4 shrink-0" aria-hidden="true" />
+    </>
+  );
+
+  if (CHROME_WEB_STORE_URL) {
+    return (
+      <Button className={BUTTON_CLASSES} asChild>
+        <a href={CHROME_WEB_STORE_URL} target="_blank" rel="noopener noreferrer">
+          {content}
+        </a>
+      </Button>
+    );
+  }
+
+  return (
+    <Button onClick={() => toast.info(t.cta.downloadExtensionToast)} className={BUTTON_CLASSES}>
+      {content}
     </Button>
   );
 }
@@ -44,9 +61,9 @@ export default function Home() {
 
   const features = [
     {
-      icon: <Globe className="h-6 w-6" />,
-      title: t.features.globalShopping.title,
-      description: t.features.globalShopping.description
+      icon: <Store className="h-6 w-6" />,
+      title: t.features.originalStores.title,
+      description: t.features.originalStores.description
     },
     {
       icon: <CreditCard className="h-6 w-6" />,
@@ -54,20 +71,15 @@ export default function Home() {
       description: t.features.localPayments.description
     },
     {
-      icon: <Truck className="h-6 w-6" />,
-      title: t.features.smartLogistics.title,
-      description: t.features.smartLogistics.description
+      icon: <Tag className="h-6 w-6" />,
+      title: t.features.storeInfo.title,
+      description: t.features.storeInfo.description
     },
     {
-      icon: <Shield className="h-6 w-6" />,
-      title: t.features.secureReliable.title,
-      description: t.features.secureReliable.description
+      icon: <Truck className="h-6 w-6" />,
+      title: t.features.delivery.title,
+      description: t.features.delivery.description
     }
-  ];
-
-  const stats = [
-    { value: "+10", label: t.hero.stats.stores },
-    { value: "+50", label: t.hero.stats.orders }
   ];
 
   return (
@@ -95,7 +107,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 text-center">
+      <section className="container mx-auto px-4 py-12 sm:py-16 text-center">
         <Badge className="mb-4 bg-brand-blue/10 text-brand-blue hover:bg-brand-blue/20">
           <Zap className="h-3 w-3 mr-1" aria-hidden="true" />
           {t.hero.badge}
@@ -105,27 +117,25 @@ export default function Home() {
           {t.hero.title}
         </h1>
 
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
           {t.hero.subtitle}
         </p>
 
-        <div className="flex flex-col items-center mb-12">
+        <div className="flex flex-col items-center gap-4">
           <DownloadExtensionButton t={t} />
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-500">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
-              <div>{stat.label}</div>
-            </div>
-          ))}
+          <p className="flex flex-wrap items-center justify-center gap-2 text-sm text-gray-600">
+            <span>{t.hero.paymentsLabel}</span>
+            <span className="rounded-full border border-gray-200 bg-white px-3 py-1 font-semibold text-gray-900">
+              {t.hero.paymentMethods}
+            </span>
+          </p>
+          <p className="max-w-xl text-sm text-gray-500">{t.hero.compatibleStores}</p>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
+      <section className="container mx-auto px-4 py-14 sm:py-16">
+        <div className="text-center mb-10 sm:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {t.features.title}
           </h2>
@@ -156,9 +166,9 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section id="como-funciona" className="bg-gray-50 py-20">
+      <section id="como-funciona" className="bg-gray-50 py-14 sm:py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 sm:mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               {t.howItWorks.title}
             </h2>
@@ -202,8 +212,8 @@ export default function Home() {
       </section>
 
       {/* Social Proof */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
+      <section className="container mx-auto px-4 py-14 sm:py-16">
+        <div className="text-center mb-10 sm:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {t.socialProof.title}
           </h2>
@@ -247,7 +257,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-brand-blue to-brand-purple py-20">
+      <section className="bg-gradient-to-r from-brand-blue to-brand-purple py-14 sm:py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             {t.cta.title}

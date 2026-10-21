@@ -24,17 +24,16 @@ export interface Translations {
     badge: string;
     title: string;
     subtitle: string;
-    stats: {
-      stores: string;
-      orders: string;
-    };
+    paymentsLabel: string;
+    paymentMethods: string;
+    compatibleStores: string;
   };
-  
+
   // Features
   features: {
     title: string;
     subtitle: string;
-    globalShopping: {
+    originalStores: {
       title: string;
       description: string;
     };
@@ -42,11 +41,11 @@ export interface Translations {
       title: string;
       description: string;
     };
-    smartLogistics: {
+    storeInfo: {
       title: string;
       description: string;
     };
-    secureReliable: {
+    delivery: {
       title: string;
       description: string;
     };
@@ -98,7 +97,6 @@ export interface Translations {
     title: string;
     subtitle: string;
     downloadExtension: string;
-    downloadExtensionBadge: string;
     downloadExtensionToast: string;
   };
   
@@ -145,46 +143,45 @@ export const translations: Record<Locale, Translations> = {
     hero: {
       badge: 'Ahora en Beta - Únete a la Revolución',
       title: 'Compra Globalmente,\nPaga Localmente',
-      subtitle: 'Accede a millones de productos internacionales con métodos de pago locales, envíos consolidados y precios transparentes. No más barreras para las compras globales.',
-      stats: {
-        stores: 'Tiendas Internacionales',
-        orders: 'Pedidos Entregados',
-      },
+      subtitle: 'Explora productos en tiendas internacionales compatibles desde sus páginas originales con la extensión M4L. Revisa tu pedido y accede a medios de pago adaptados a Perú.',
+      paymentsLabel: 'Paga con',
+      paymentMethods: 'Yape · Plin · Tarjetas',
+      compatibleStores: 'Compatible con Amazon, eBay, Walmart, Shein, Tommy Hilfiger y Jomashop',
     },
     features: {
       title: '¿Por qué elegir Mall for Latam?',
-      subtitle: 'Eliminamos la complejidad de las compras internacionales con tecnología inteligente y experiencia local.',
-      globalShopping: {
-        title: 'Compras Globales',
-        description: 'Accede a productos de Amazon, eBay, Walmart, Shein y más',
+      subtitle: 'Simplificamos las compras internacionales con tecnología y experiencia local.',
+      originalStores: {
+        title: 'Compra en tiendas originales compatibles',
+        description: 'Navega desde las páginas de los comercios compatibles con M4L.',
       },
       localPayments: {
-        title: 'Pagos Locales',
-        description: 'Paga con Yape, Plin y tarjetas de crédito o débito',
+        title: 'Pagos locales',
+        description: 'Utiliza los medios de pago habilitados para tu compra.',
       },
-      smartLogistics: {
-        title: 'Envío Consolidado',
-        description: 'Envíos consolidados con seguimiento de tu pedido',
+      storeInfo: {
+        title: 'Consulta información de origen',
+        description: 'Revisa precios, disponibilidad y promociones publicados por la tienda; pueden cambiar.',
       },
-      secureReliable: {
-        title: 'Seguro y Confiable',
-        description: 'Transacciones protegidas con garantía del comprador',
+      delivery: {
+        title: 'Entrega hacia Perú',
+        description: 'Conoce los cargos y las condiciones de envío aplicables a tu pedido.',
       },
     },
     howItWorks: {
       title: 'Cómo funciona nuestra plataforma',
-      subtitle: 'Comprar internacionalmente nunca ha sido tan simple',
+      subtitle: 'En tres pasos, desde la tienda original',
       discover: {
-        title: '1. Descubre Productos',
-        description: 'Navega o usa nuestra extensión de Chrome para agregar productos de cualquier tienda internacional',
+        title: '1. Explora',
+        description: 'Visita una tienda compatible desde Google Chrome.',
       },
       checkout: {
-        title: '2. Pago sin Sorpresas',
-        description: 'Calculamos todos los costos por adelantado: producto, comisión y envío. Sin sorpresas al final.',
+        title: '2. Elige y revisa',
+        description: 'Selecciona el producto con M4L y consulta el resumen de cargos.',
       },
       receive: {
-        title: '3. Recibe y Rastrea',
-        description: 'Nos encargamos de todo desde la compra hasta la entrega, con seguimiento de tu envío',
+        title: '3. Paga y recibe',
+        description: 'Utiliza un medio de pago habilitado y consulta la información disponible de tu pedido.',
       },
     },
     socialProof: {
@@ -209,11 +206,10 @@ export const translations: Record<Locale, Translations> = {
       },
     },
     cta: {
-      title: 'Empieza hoy a comprar globalmente',
+      title: 'Tu próxima compra internacional empieza aquí.',
       subtitle: 'Únete a los latinoamericanos que ya están comprando de manera más inteligente con Mall for Latam.',
       downloadExtension: 'Descargar Extensión de Chrome',
-      downloadExtensionBadge: 'Próximamente',
-      downloadExtensionToast: 'La extensión está en revisión en Chrome Web Store. ¡Muy pronto podrás descargarla!',
+      downloadExtensionToast: 'La extensión estará disponible muy pronto en Chrome Web Store.',
     },
     footer: {
       description: 'Democratizando el acceso a productos globales para Latinoamérica.',
@@ -255,46 +251,45 @@ export const translations: Record<Locale, Translations> = {
     hero: {
       badge: 'Now in Beta - Join the Revolution',
       title: 'Shop Globally,\nPay Locally',
-      subtitle: 'Access millions of international products with local payment methods, consolidated shipping, and transparent pricing. No more barriers to global shopping.',
-      stats: {
-        stores: 'International Stores',
-        orders: 'Orders Delivered',
-      },
+      subtitle: 'Explore products in compatible international stores, right from their original pages, with the M4L extension. Review your order and use payment methods adapted to Peru.',
+      paymentsLabel: 'Pay with',
+      paymentMethods: 'Yape · Plin · Cards',
+      compatibleStores: 'Works with Amazon, eBay, Walmart, Shein, Tommy Hilfiger and Jomashop',
     },
     features: {
       title: 'Why choose Mall for Latam?',
-      subtitle: 'We eliminate the complexity of international shopping with smart technology and local expertise.',
-      globalShopping: {
-        title: 'Global Shopping',
-        description: 'Access products from Amazon, eBay, Walmart, Shein and more',
+      subtitle: 'We simplify international shopping with technology and local expertise.',
+      originalStores: {
+        title: 'Shop in compatible original stores',
+        description: 'Browse from the pages of the stores compatible with M4L.',
       },
       localPayments: {
-        title: 'Local Payments',
-        description: 'Pay with Yape, Plin, and credit or debit cards',
+        title: 'Local payments',
+        description: 'Use the payment methods enabled for your purchase.',
       },
-      smartLogistics: {
-        title: 'Consolidated Shipping',
-        description: 'Consolidated shipping with order tracking',
+      storeInfo: {
+        title: 'Check the store information',
+        description: 'Review prices, availability and promotions published by the store; they may change.',
       },
-      secureReliable: {
-        title: 'Secure & Reliable',
-        description: 'Protected transactions with buyer guarantee',
+      delivery: {
+        title: 'Delivery to Peru',
+        description: 'See the charges and shipping conditions that apply to your order.',
       },
     },
     howItWorks: {
       title: 'How our platform works',
-      subtitle: 'Shopping internationally has never been this simple',
+      subtitle: 'Three steps, starting from the original store',
       discover: {
-        title: '1. Discover Products',
-        description: 'Browse or use our Chrome extension to add products from any international store',
+        title: '1. Explore',
+        description: 'Visit a compatible store using Google Chrome.',
       },
       checkout: {
-        title: '2. No-Surprises Checkout',
-        description: 'We calculate all costs upfront: product, fee, and shipping. No surprises at the end.',
+        title: '2. Choose and review',
+        description: 'Select the product with M4L and check the summary of charges.',
       },
       receive: {
-        title: '3. Receive & Track',
-        description: 'We handle everything from purchase to delivery, with order tracking',
+        title: '3. Pay and receive',
+        description: 'Use an enabled payment method and check the available information about your order.',
       },
     },
     socialProof: {
@@ -319,11 +314,10 @@ export const translations: Record<Locale, Translations> = {
       },
     },
     cta: {
-      title: 'Start shopping globally today',
+      title: 'Your next international purchase starts here.',
       subtitle: 'Join the Latin Americans who are already shopping smarter with Mall for Latam.',
       downloadExtension: 'Download Chrome Extension',
-      downloadExtensionBadge: 'Coming soon',
-      downloadExtensionToast: 'The extension is under review on the Chrome Web Store. You will be able to download it very soon!',
+      downloadExtensionToast: 'The extension will be available very soon on the Chrome Web Store.',
     },
     footer: {
       description: 'Democratizing access to global products for Latin America.',
@@ -365,46 +359,45 @@ export const translations: Record<Locale, Translations> = {
     hero: {
       badge: 'Agora em Beta - Junte-se à Revolução',
       title: 'Compre Globalmente,\nPague Localmente',
-      subtitle: 'Acesse milhões de produtos internacionais com métodos de pagamento locais, frete consolidado e preços transparentes. Chega de barreiras para compras globais.',
-      stats: {
-        stores: 'Lojas Internacionais',
-        orders: 'Pedidos Entregues',
-      },
+      subtitle: 'Explore produtos em lojas internacionais compatíveis, direto das páginas originais, com a extensão M4L. Revise seu pedido e use meios de pagamento adaptados ao Peru.',
+      paymentsLabel: 'Pague com',
+      paymentMethods: 'Yape · Plin · Cartões',
+      compatibleStores: 'Compatível com Amazon, eBay, Walmart, Shein, Tommy Hilfiger e Jomashop',
     },
     features: {
       title: 'Por que escolher Mall for Latam?',
-      subtitle: 'Eliminamos a complexidade das compras internacionais com tecnologia inteligente e expertise local.',
-      globalShopping: {
-        title: 'Compras Globais',
-        description: 'Acesse produtos da Amazon, eBay, Walmart, Shein e mais',
+      subtitle: 'Simplificamos as compras internacionais com tecnologia e experiência local.',
+      originalStores: {
+        title: 'Compre em lojas originais compatíveis',
+        description: 'Navegue pelas páginas das lojas compatíveis com a M4L.',
       },
       localPayments: {
-        title: 'Pagamentos Locais',
-        description: 'Pague com Yape, Plin e cartões de crédito ou débito',
+        title: 'Pagamentos locais',
+        description: 'Use os meios de pagamento habilitados para sua compra.',
       },
-      smartLogistics: {
-        title: 'Frete Consolidado',
-        description: 'Frete consolidado com rastreamento do seu pedido',
+      storeInfo: {
+        title: 'Consulte as informações da loja',
+        description: 'Revise preços, disponibilidade e promoções publicados pela loja; podem mudar.',
       },
-      secureReliable: {
-        title: 'Seguro e Confiável',
-        description: 'Transações protegidas com garantia do comprador',
+      delivery: {
+        title: 'Entrega no Peru',
+        description: 'Conheça as taxas e as condições de envio aplicáveis ao seu pedido.',
       },
     },
     howItWorks: {
       title: 'Como nossa plataforma funciona',
-      subtitle: 'Comprar internacionalmente nunca foi tão simples',
+      subtitle: 'Três passos, a partir da loja original',
       discover: {
-        title: '1. Descubra Produtos',
-        description: 'Navegue ou use nossa extensão do Chrome para adicionar produtos de qualquer loja internacional',
+        title: '1. Explore',
+        description: 'Visite uma loja compatível pelo Google Chrome.',
       },
       checkout: {
-        title: '2. Pagamento sem Surpresas',
-        description: 'Calculamos todos os custos antecipadamente: produto, taxa de serviço e frete. Sem surpresas no final.',
+        title: '2. Escolha e revise',
+        description: 'Selecione o produto com a M4L e consulte o resumo das taxas.',
       },
       receive: {
-        title: '3. Receba e Rastreie',
-        description: 'Cuidamos de tudo desde a compra até a entrega, com rastreamento do seu pedido',
+        title: '3. Pague e receba',
+        description: 'Use um meio de pagamento habilitado e consulte as informações disponíveis do seu pedido.',
       },
     },
     socialProof: {
@@ -429,11 +422,10 @@ export const translations: Record<Locale, Translations> = {
       },
     },
     cta: {
-      title: 'Comece a comprar globalmente hoje',
+      title: 'Sua próxima compra internacional começa aqui.',
       subtitle: 'Junte-se aos latino-americanos que já estão comprando de forma mais inteligente com Mall for Latam.',
       downloadExtension: 'Baixar Extensão do Chrome',
-      downloadExtensionBadge: 'Em breve',
-      downloadExtensionToast: 'A extensão está em revisão na Chrome Web Store. Você poderá baixá-la muito em breve!',
+      downloadExtensionToast: 'A extensão estará disponível muito em breve na Chrome Web Store.',
     },
     footer: {
       description: 'Democratizando o acesso a produtos globais para a América Latina.',
