@@ -26,11 +26,11 @@ import {
 // esté publicada. Mientras esté vacío, el botón avisa que llega pronto.
 const CHROME_WEB_STORE_URL = '';
 
-// Tarjetas no lleva label: se muestra el texto traducido al lado del icono.
-const PAYMENT_METHODS: { src: string; width: number; label?: string }[] = [
-  { src: '/payments/yape.png', width: 60, label: 'Yape' },
-  { src: '/payments/plin.png', width: 32, label: 'Plin' },
-  { src: '/payments/tarjetas.png', width: 43 },
+// Tarjetas no lleva label fijo: usa el texto traducido.
+const PAYMENT_METHODS: { src: string; width: number; height: number; label?: string }[] = [
+  { src: '/payments/yape.png', width: 240, height: 211, label: 'Yape' },
+  { src: '/payments/plin.png', width: 240, height: 240, label: 'Plin' },
+  { src: '/payments/tarjetas.png', width: 240, height: 193 },
 ];
 
 const STORES = [
@@ -174,26 +174,28 @@ export default function Home() {
 
         <div className="flex flex-col items-center gap-4">
           <DownloadExtensionButton t={t} />
-          <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-gray-600">
-            <span>{t.hero.paymentsLabel}</span>
-            <ul className="flex items-center gap-2">
-              {PAYMENT_METHODS.map((method) => (
-                <li
-                  key={method.src}
-                  className="flex h-10 items-center gap-1.5 rounded-xl border border-gray-200 bg-white px-2 shadow-sm"
-                >
-                  <Image
-                    src={method.src}
-                    alt={method.label ?? t.hero.cards}
-                    width={method.width}
-                    height={32}
-                    className="h-7 w-auto rounded-md"
-                  />
-                  {!method.label && (
-                    <span className="pr-1 font-semibold text-gray-900">{t.hero.cards}</span>
-                  )}
-                </li>
-              ))}
+          {/* Propuesta de valor: los medios de pago locales, grandes y a la
+              vista, justo debajo del botón principal. */}
+          <div className="mt-6 flex flex-col items-center gap-4">
+            <p className="text-base sm:text-lg font-semibold text-gray-900">{t.hero.paymentsLabel}</p>
+            <ul className="flex items-start justify-center gap-4 sm:gap-6">
+              {PAYMENT_METHODS.map((method) => {
+                const label = method.label ?? t.hero.cards;
+                return (
+                  <li key={method.src} className="flex flex-col items-center gap-2">
+                    <div className="flex h-20 w-20 sm:h-28 sm:w-28 items-center justify-center rounded-2xl border border-gray-100 bg-white p-2.5 sm:p-3 shadow-md">
+                      <Image
+                        src={method.src}
+                        alt={label}
+                        width={method.width}
+                        height={method.height}
+                        className="h-full w-full object-contain"
+                      />
+                    </div>
+                    <span className="text-sm sm:text-base font-semibold text-gray-800">{label}</span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
