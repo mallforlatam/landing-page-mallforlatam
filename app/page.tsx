@@ -164,7 +164,7 @@ export default function Home() {
           {t.hero.badge}
         </Badge>
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.15] pb-2 mb-4 bg-gradient-to-r from-brand-blue to-brand-purple bg-clip-text text-transparent whitespace-pre-line">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-[-0.01em] leading-[1.15] pb-2 mb-4 bg-gradient-to-r from-brand-blue to-brand-purple bg-clip-text text-transparent whitespace-pre-line">
           {t.hero.title}
         </h1>
 
