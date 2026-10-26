@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <LegalPage title="Política de Privacidad" updatedAt="1 de octubre de 2026">
+    <LegalPage title="Política de Privacidad" updatedAt="26 de octubre de 2026">
       <p>
         En Mall for Latam (&ldquo;M4L&rdquo;, &ldquo;nosotros&rdquo;) te ayudamos a comprar en tiendas
-        internacionales (como Amazon, eBay, Walmart, Shein, Tommy Hilfiger y
-        Jomashop) y a recibir tus productos en Latinoamérica, pagando en tu
+        internacionales (como Amazon, eBay, Walmart, Shein, Tommy Hilfiger,
+        Jomashop, Macy&apos;s y Sephora) y a recibir tus productos en Latinoamérica, pagando en tu
         moneda local. Esta política explica qué datos recopilamos, para qué los
         usamos y qué derechos tienes sobre ellos.
       </p>
@@ -148,6 +148,8 @@ export default function PrivacyPolicyPage() {
         <li>shein.com (Shein)</li>
         <li>tommy.com (Tommy Hilfiger)</li>
         <li>jomashop.com (Jomashop)</li>
+        <li>macys.com (Macy&apos;s)</li>
+        <li>sephora.com (Sephora)</li>
       </ul>
       <p>
         En cualquier otro sitio web, la extensión está inactiva y no se

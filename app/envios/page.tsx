@@ -20,7 +20,7 @@ export default function ShippingInfoPage() {
         <li>
           <strong>En almacén del proveedor:</strong> compramos tu producto y
           lo recibimos directamente de la tienda de origen (Amazon, eBay,
-          Walmart, Shein, Tommy Hilfiger o Jomashop) en nuestro almacén de
+          Walmart, Shein, Tommy Hilfiger, Jomashop, Macy&apos;s o Sephora) en nuestro almacén de
           Miami.
         </li>
         <li>

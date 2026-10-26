@@ -25,8 +25,9 @@ export interface Translations {
     title: string;
     subtitle: string;
     paymentsLabel: string;
-    paymentMethods: string;
+    cards: string;
     compatibleStores: string;
+    storesCarouselLabel: string;
   };
 
   // Features
@@ -142,11 +143,12 @@ export const translations: Record<Locale, Translations> = {
     },
     hero: {
       badge: 'Ahora en Beta - Únete a la Revolución',
-      title: 'Compra Globalmente,\nPaga Localmente',
+      title: 'Paga local,\ncompra global',
       subtitle: 'Explora productos en tiendas internacionales compatibles desde sus páginas originales con la extensión M4L. Revisa tu pedido y accede a medios de pago adaptados a Perú.',
       paymentsLabel: 'Paga con',
-      paymentMethods: 'Yape · Plin · Tarjetas',
-      compatibleStores: 'Compatible con Amazon, eBay, Walmart, Shein, Tommy Hilfiger y Jomashop',
+      cards: 'Tarjetas',
+      compatibleStores: 'Compatible con Amazon, eBay, Walmart, Shein, Tommy Hilfiger, Jomashop, Macy\'s y Sephora',
+      storesCarouselLabel: 'Tiendas compatibles',
     },
     features: {
       title: '¿Por qué elegir Mall for Latam?',
@@ -250,11 +252,12 @@ export const translations: Record<Locale, Translations> = {
     },
     hero: {
       badge: 'Now in Beta - Join the Revolution',
-      title: 'Shop Globally,\nPay Locally',
+      title: 'Pay local,\nshop global',
       subtitle: 'Explore products in compatible international stores, right from their original pages, with the M4L extension. Review your order and use payment methods adapted to Peru.',
       paymentsLabel: 'Pay with',
-      paymentMethods: 'Yape · Plin · Cards',
-      compatibleStores: 'Works with Amazon, eBay, Walmart, Shein, Tommy Hilfiger and Jomashop',
+      cards: 'Cards',
+      compatibleStores: 'Works with Amazon, eBay, Walmart, Shein, Tommy Hilfiger, Jomashop, Macy\'s and Sephora',
+      storesCarouselLabel: 'Compatible stores',
     },
     features: {
       title: 'Why choose Mall for Latam?',
@@ -358,11 +361,12 @@ export const translations: Record<Locale, Translations> = {
     },
     hero: {
       badge: 'Agora em Beta - Junte-se à Revolução',
-      title: 'Compre Globalmente,\nPague Localmente',
+      title: 'Pague local,\ncompre global',
       subtitle: 'Explore produtos em lojas internacionais compatíveis, direto das páginas originais, com a extensão M4L. Revise seu pedido e use meios de pagamento adaptados ao Peru.',
       paymentsLabel: 'Pague com',
-      paymentMethods: 'Yape · Plin · Cartões',
-      compatibleStores: 'Compatível com Amazon, eBay, Walmart, Shein, Tommy Hilfiger e Jomashop',
+      cards: 'Cartões',
+      compatibleStores: 'Compatível com Amazon, eBay, Walmart, Shein, Tommy Hilfiger, Jomashop, Macy\'s e Sephora',
+      storesCarouselLabel: 'Lojas compatíveis',
     },
     features: {
       title: 'Por que escolher Mall for Latam?',

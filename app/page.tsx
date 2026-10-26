@@ -26,6 +26,57 @@ import {
 // esté publicada. Mientras esté vacío, el botón avisa que llega pronto.
 const CHROME_WEB_STORE_URL = '';
 
+// Tarjetas no lleva label: se muestra el texto traducido al lado del icono.
+const PAYMENT_METHODS: { src: string; width: number; label?: string }[] = [
+  { src: '/payments/yape.png', width: 60, label: 'Yape' },
+  { src: '/payments/plin.png', width: 32, label: 'Plin' },
+  { src: '/payments/tarjetas.png', width: 43 },
+];
+
+const STORES = [
+  { name: 'Amazon', src: '/stores/amazon.png', width: 286, height: 32 },
+  { name: 'eBay', src: '/stores/ebay.png', width: 239, height: 32 },
+  { name: 'Walmart', src: '/stores/walmart.png', width: 401, height: 29 },
+  { name: 'Shein', src: '/stores/shein.png', width: 460, height: 27 },
+  { name: 'Tommy Hilfiger', src: '/stores/tommy-hilfiger.png', width: 1707, height: 14 },
+  { name: 'Jomashop', src: '/stores/jomashop.png', width: 792, height: 21 },
+  { name: "Macy's", src: '/stores/macys.png', width: 336, height: 32 },
+  { name: 'Sephora', src: '/stores/sephora.png', width: 741, height: 22 },
+];
+
+// Alturas calculadas para que todos los logos ocupen un área parecida
+// (~3600 px²): los muy anchos, como Tommy Hilfiger, quedan más bajos.
+// La lista va duplicada para que el desplazamiento sea continuo; la copia
+// queda oculta a lectores de pantalla. Con movimiento reducido se detiene.
+function StoresCarousel({ label, srLabel }: { label: string; srLabel: string }) {
+  return (
+    <div className="mt-10 sm:mt-12">
+      <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-500">{label}</p>
+      <p className="sr-only">{srLabel}</p>
+      <div className="group relative mx-auto max-w-5xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+          {[0, 1].map((copy) => (
+            <ul key={copy} className="flex shrink-0 items-center" aria-hidden="true">
+              {STORES.map((store) => (
+                <li key={store.name} className="flex h-12 items-center px-6 sm:px-10">
+                  <Image
+                    src={store.src}
+                    alt={copy === 0 ? store.name : ''}
+                    width={store.width}
+                    height={96}
+                    style={{ height: store.height }}
+                    className="w-auto object-contain"
+                  />
+                </li>
+              ))}
+            </ul>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const BUTTON_CLASSES =
   'h-auto max-w-full rounded-full bg-slate-900 text-white hover:bg-slate-800 gap-1 px-4 py-2.5 text-sm sm:gap-2 sm:px-8 sm:py-4 sm:text-lg';
 
@@ -123,14 +174,31 @@ export default function Home() {
 
         <div className="flex flex-col items-center gap-4">
           <DownloadExtensionButton t={t} />
-          <p className="flex flex-wrap items-center justify-center gap-2 text-sm text-gray-600">
+          <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-gray-600">
             <span>{t.hero.paymentsLabel}</span>
-            <span className="rounded-full border border-gray-200 bg-white px-3 py-1 font-semibold text-gray-900">
-              {t.hero.paymentMethods}
-            </span>
-          </p>
-          <p className="max-w-xl text-sm text-gray-500">{t.hero.compatibleStores}</p>
+            <ul className="flex items-center gap-2">
+              {PAYMENT_METHODS.map((method) => (
+                <li
+                  key={method.src}
+                  className="flex h-10 items-center gap-1.5 rounded-xl border border-gray-200 bg-white px-2 shadow-sm"
+                >
+                  <Image
+                    src={method.src}
+                    alt={method.label ?? t.hero.cards}
+                    width={method.width}
+                    height={32}
+                    className="h-7 w-auto rounded-md"
+                  />
+                  {!method.label && (
+                    <span className="pr-1 font-semibold text-gray-900">{t.hero.cards}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
+
+        <StoresCarousel label={t.hero.storesCarouselLabel} srLabel={t.hero.compatibleStores} />
       </section>
 
       {/* Features Section */}

@@ -18,7 +18,7 @@ export default function HelpCenterPage() {
       <h2>¿Cómo compro con Mall for Latam?</h2>
       <p>
         Instala nuestra extensión de Chrome, agrega productos desde Amazon,
-        eBay, Walmart, Shein, Tommy Hilfiger o Jomashop, y luego ve al{' '}
+        eBay, Walmart, Shein, Tommy Hilfiger, Jomashop, Macy&apos;s o Sephora, y luego ve al{' '}
         <a href="https://app.mallforlatam.com">dashboard</a> para confirmar
         tu dirección y tu pago.
       </p>

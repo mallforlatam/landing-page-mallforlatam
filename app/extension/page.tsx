@@ -23,6 +23,8 @@ export default function ExtensionPage() {
         <li>Shein</li>
         <li>Tommy Hilfiger</li>
         <li>Jomashop</li>
+        <li>Macy&apos;s</li>
+        <li>Sephora</li>
       </ul>
       <p>Seguimos agregando más tiendas conforme avanzamos.</p>
 

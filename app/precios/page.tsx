@@ -19,7 +19,8 @@ export default function PricingPage() {
       <ul>
         <li>
           <strong>Precio del producto:</strong> el precio que la tienda de
-          origen (Amazon, eBay, Walmart, Shein, Tommy Hilfiger o Jomashop)
+          origen (Amazon, eBay, Walmart, Shein, Tommy Hilfiger, Jomashop, Macy&apos;s
+          o Sephora)
           muestra en el momento de agregarlo a tu carrito.
         </li>
         <li>
