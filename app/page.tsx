@@ -28,9 +28,9 @@ const CHROME_WEB_STORE_URL = '';
 
 // Tarjetas no lleva label fijo: usa el texto traducido.
 const PAYMENT_METHODS: { src: string; width: number; height: number; label?: string }[] = [
-  { src: '/payments/yape.png', width: 240, height: 211, label: 'Yape' },
-  { src: '/payments/plin.png', width: 240, height: 240, label: 'Plin' },
-  { src: '/payments/tarjetas.png', width: 240, height: 193 },
+  { src: '/payments/yape-2026.png', width: 240, height: 211, label: 'Yape' },
+  { src: '/payments/plin-2026.png', width: 240, height: 240, label: 'Plin' },
+  { src: '/payments/tarjetas-2026.png', width: 240, height: 193 },
 ];
 
 const STORES = [
