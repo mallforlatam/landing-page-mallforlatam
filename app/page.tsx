@@ -32,18 +32,18 @@ const PAYMENT_METHODS: { src: string; width: number; height: number; label?: str
 ];
 
 const STORES = [
-  { name: 'Amazon', src: '/stores/amazon.png', width: 286, height: 32 },
-  { name: 'eBay', src: '/stores/ebay.png', width: 239, height: 32 },
-  { name: 'Walmart', src: '/stores/walmart.png', width: 401, height: 29 },
-  { name: 'Shein', src: '/stores/shein.png', width: 460, height: 27 },
-  { name: 'Tommy Hilfiger', src: '/stores/tommy-hilfiger.png', width: 1707, height: 14 },
-  { name: 'Jomashop', src: '/stores/jomashop.png', width: 792, height: 21 },
-  { name: "Macy's", src: '/stores/macys.png', width: 336, height: 32 },
-  { name: 'Sephora', src: '/stores/sephora.png', width: 741, height: 22 },
+  { name: 'Amazon', src: '/stores/amazon.png', width: 286, height: 44 },
+  { name: 'eBay', src: '/stores/ebay.png', width: 239, height: 44 },
+  { name: 'Walmart', src: '/stores/walmart.png', width: 401, height: 40 },
+  { name: 'Shein', src: '/stores/shein.png', width: 460, height: 37 },
+  { name: 'Tommy Hilfiger', src: '/stores/tommy-hilfiger.png', width: 1707, height: 19 },
+  { name: 'Jomashop', src: '/stores/jomashop.png', width: 792, height: 28 },
+  { name: "Macy's", src: '/stores/macys.png', width: 336, height: 43 },
+  { name: 'Sephora', src: '/stores/sephora.png', width: 741, height: 29 },
 ];
 
 // Alturas calculadas para que todos los logos ocupen un área parecida
-// (~3600 px²): los muy anchos, como Tommy Hilfiger, quedan más bajos.
+// (~6560 px², tope 44 px): los muy anchos, como Tommy Hilfiger, quedan más bajos.
 // La lista va duplicada para que el desplazamiento sea continuo; la copia
 // queda oculta a lectores de pantalla. Con movimiento reducido se detiene.
 function StoresCarousel({ label, srLabel }: { label: string; srLabel: string }) {
@@ -56,7 +56,7 @@ function StoresCarousel({ label, srLabel }: { label: string; srLabel: string }) 
           {[0, 1].map((copy) => (
             <ul key={copy} className="flex shrink-0 items-center" aria-hidden="true">
               {STORES.map((store) => (
-                <li key={store.name} className="flex h-12 items-center px-6 sm:px-10">
+                <li key={store.name} className="flex h-14 items-center px-7 sm:px-12">
                   <Image
                     src={store.src}
                     alt={copy === 0 ? store.name : ''}
