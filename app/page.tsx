@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { LanguageSelector } from '@/components/language-selector';
 import { useLocale } from '@/hooks/use-locale';
 import { getTranslations, type Translations } from '@/lib/i18n';
@@ -15,7 +14,6 @@ import {
   CreditCard,
   Truck,
   Tag,
-  Zap,
   Search,
   Star,
   ArrowRight,
@@ -50,8 +48,8 @@ const STORES = [
 // queda oculta a lectores de pantalla. Con movimiento reducido se detiene.
 function StoresCarousel({ label, srLabel }: { label: string; srLabel: string }) {
   return (
-    <div className="mt-10 sm:mt-12">
-      <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-500">{label}</p>
+    <div className="mt-6 sm:mt-7">
+      <p className="mb-3 text-sm sm:text-base font-bold uppercase tracking-widest text-gray-700">{label}</p>
       <p className="sr-only">{srLabel}</p>
       <div className="group relative mx-auto max-w-5xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
         <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none">
@@ -77,10 +75,15 @@ function StoresCarousel({ label, srLabel }: { label: string; srLabel: string }) 
   );
 }
 
-const BUTTON_CLASSES =
-  'h-auto max-w-full rounded-full bg-slate-900 text-white hover:bg-slate-800 gap-1 px-4 py-2.5 text-sm sm:gap-2 sm:px-8 sm:py-4 sm:text-lg';
+// Mismo degradado que el título del hero. Sobre la sección CTA (que ya
+// tiene ese degradado de fondo) el botón va oscuro para no perderse.
+const BRAND_GRADIENT_BUTTON =
+  'bg-gradient-to-r from-brand-blue to-brand-purple text-white shadow-md shadow-brand-purple/20 hover:opacity-90';
+const BUTTON_BASE =
+  'h-auto max-w-full rounded-full font-semibold gap-2 px-6 py-2.5 text-sm sm:px-7 sm:py-3 sm:text-base transition-opacity';
 
-function DownloadExtensionButton({ t }: { t: Translations }) {
+function DownloadExtensionButton({ t, onGradient = false }: { t: Translations; onGradient?: boolean }) {
+  const BUTTON_CLASSES = `${BUTTON_BASE} ${onGradient ? 'bg-slate-900 text-white hover:bg-slate-800' : BRAND_GRADIENT_BUTTON}`;
   const content = (
     <>
       <Chrome className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" aria-hidden="true" />
@@ -150,7 +153,7 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-2 sm:gap-4 shrink-0">
             <LanguageSelector currentLocale={locale} onLocaleChange={changeLocale} />
-            <Button className="px-3 py-2 text-sm sm:px-4 sm:py-2 sm:text-base" asChild>
+            <Button className={`rounded-full px-4 py-2 text-sm sm:px-5 sm:text-base font-semibold ${BRAND_GRADIENT_BUTTON}`} asChild>
               <a href="https://app.mallforlatam.com">{t.nav.getStarted}</a>
             </Button>
           </div>
@@ -158,17 +161,12 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-12 sm:py-16 text-center">
-        <Badge className="mb-4 bg-brand-blue/10 text-brand-blue hover:bg-brand-blue/20">
-          <Zap className="h-3 w-3 mr-1" aria-hidden="true" />
-          {t.hero.badge}
-        </Badge>
-
+      <section className="container mx-auto px-4 pt-6 pb-10 sm:pt-8 sm:pb-12 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-[-0.01em] leading-[1.15] pb-2 mb-4 bg-gradient-to-r from-brand-blue to-brand-purple bg-clip-text text-transparent whitespace-pre-line">
           {t.hero.title}
         </h1>
 
-        <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg sm:text-xl text-gray-600 mb-5 max-w-3xl mx-auto leading-relaxed">
           {t.hero.subtitle}
         </p>
 
@@ -176,14 +174,14 @@ export default function Home() {
           <DownloadExtensionButton t={t} />
           {/* Propuesta de valor: los medios de pago locales, grandes y a la
               vista, justo debajo del botón principal. */}
-          <div className="mt-6 flex flex-col items-center gap-4">
+          <div className="mt-4 flex flex-col items-center gap-3">
             <p className="text-base sm:text-lg font-semibold text-gray-900">{t.hero.paymentsLabel}</p>
             <ul className="flex items-start justify-center gap-4 sm:gap-6">
               {PAYMENT_METHODS.map((method) => {
                 const label = method.label ?? t.hero.cards;
                 return (
                   <li key={method.src} className="flex flex-col items-center gap-2">
-                    <div className="flex h-20 w-20 sm:h-28 sm:w-28 items-center justify-center rounded-2xl border border-gray-100 bg-white p-2.5 sm:p-3 shadow-md">
+                    <div className="flex h-20 w-20 sm:h-24 sm:w-24 items-center justify-center rounded-2xl border border-gray-100 bg-white p-2.5 sm:p-3 shadow-md">
                       <Image
                         src={method.src}
                         alt={label}
@@ -337,7 +335,7 @@ export default function Home() {
           </p>
 
           <div className="flex justify-center">
-            <DownloadExtensionButton t={t} />
+            <DownloadExtensionButton t={t} onGradient />
           </div>
         </div>
       </section>
