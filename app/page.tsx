@@ -22,7 +22,7 @@ import {
 
 // Pegar acá el enlace de la ficha en Chrome Web Store cuando la extensión
 // esté publicada. Mientras esté vacío, el botón avisa que llega pronto.
-const CHROME_WEB_STORE_URL = '';
+const CHROME_WEB_STORE_URL = 'https://chromewebstore.google.com/detail/mall-for-latam/bjikknniacbklmndgaiepoipcahffjal';
 
 // Tarjetas no lleva label fijo: usa el texto traducido.
 const PAYMENT_METHODS: { src: string; width: number; height: number; label?: string }[] = [
