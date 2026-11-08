@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function ReturnsPage() {
   return (
-    <LegalPage title="Devoluciones" updatedAt="30 de septiembre de 2026">
+    <LegalPage title="Devoluciones" updatedAt="8 de noviembre de 2026">
       <p>
         Mall for Latam actúa como intermediario de compra: compramos tu
         producto en la tienda de origen y lo enviamos hasta tu ciudad. Por
@@ -18,10 +18,12 @@ export default function ReturnsPage() {
 
       <h2>Antes de comprar el producto</h2>
       <p>
-        Si tu pedido todavía está en estado &ldquo;pendiente de pago&rdquo; o
-        &ldquo;verificando pago&rdquo;, puedes solicitar la cancelación sin costo
-        escribiéndonos a{' '}
+        Si tu pedido todavía no ha sido comprado en la tienda de origen,
+        puedes solicitar la cancelación sin costo escribiéndonos a{' '}
         <a href="mailto:soporte@mallforlatam.com">soporte@mallforlatam.com</a>.
+        Si ya pagaste, te devolvemos el importe completo por el mismo medio
+        de pago. En pagos con tarjeta, el abono depende de los plazos de tu
+        banco.
       </p>
 
       <h2>Después de comprar el producto</h2>

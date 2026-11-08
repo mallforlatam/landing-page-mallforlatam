@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function HelpCenterPage() {
   return (
-    <LegalPage title="Centro de Ayuda" updatedAt="30 de septiembre de 2026">
+    <LegalPage title="Centro de Ayuda" updatedAt="8 de noviembre de 2026">
       <p>
         Respuestas a las preguntas más comunes sobre Mall for Latam. Si no
         encuentras lo que buscas, escríbenos desde la página de{' '}
@@ -38,10 +38,10 @@ export default function HelpCenterPage() {
 
       <h2>¿Cómo sé en qué estado está mi pedido?</h2>
       <p>
-        Cuando validamos tu pago, te asignamos un código de guía único
-        (formato M4L-00001-2026) que puedes ver en el dashboard. Tu pedido
-        pasa por: en almacén del proveedor → en tránsito de Miami a Lima →
-        entregado. Más detalles en <a href="/envios">Información de Envíos</a>.
+        Al confirmar tu pedido te asignamos un código único (formato
+        M4L-00001-2026) que ves en el dashboard. Úsalo como referencia en tu
+        pago y en cualquier consulta. Después del pago, tu pedido pasa por:
+        en almacén del proveedor → en tránsito de Miami a Lima → entregado. Más detalles en <a href="/envios">Información de Envíos</a>.
       </p>
 
       <h2>¿Qué pasa si el precio aparece en otra moneda?</h2>
