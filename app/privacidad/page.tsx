@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <LegalPage title="Política de Privacidad" updatedAt="26 de octubre de 2026">
+    <LegalPage title="Política de Privacidad" updatedAt="8 de noviembre de 2026">
       <p>
         En Mall for Latam (&ldquo;M4L&rdquo;, &ldquo;nosotros&rdquo;) te ayudamos a comprar en tiendas
         internacionales (como Amazon, eBay, Walmart, Shein, Tommy Hilfiger,
@@ -48,12 +48,17 @@ export default function PrivacyPolicyPage() {
           método de pago elegido (Yape, Plin o tarjeta) y el estado de tu
           envío, incluyendo el código de pedido que te asignamos.
         </li>
+        <li>
+          <strong>Comprobantes de pago:</strong> si pagas con Yape o Plin, la
+          captura del pago que nos envías y el número de operación. Pueden
+          incluir tu nombre, el monto y parte de tu número de teléfono.
+        </li>
       </ul>
       <p>
         <strong>No almacenamos datos de tarjetas ni cuentas bancarias.</strong>{' '}
-        Pagas con Yape, Plin o tarjeta, y nuestro equipo verifica cada pago
-        — M4L nunca ve ni guarda el número completo de tu tarjeta ni tus
-        datos bancarios.
+        Si pagas con Yape o Plin, nuestro equipo revisa tu comprobante contra
+        la cuenta de M4L antes de procesar el pedido. M4L nunca ve ni guarda
+        el número completo de tu tarjeta ni tus claves bancarias.
       </p>
 
       <h2>2. Para qué usamos tus datos</h2>
@@ -99,6 +104,11 @@ export default function PrivacyPolicyPage() {
         Conservamos los datos de tu cuenta y pedidos mientras mantengas una
         cuenta activa con nosotros, y por el tiempo adicional necesario para
         cumplir obligaciones legales, contables o de resolución de disputas.
+      </p>
+      <p>
+        Los comprobantes de pago se guardan en un almacenamiento privado al
+        que solo accede nuestro equipo, y se eliminan 12 meses después de que
+        el pedido se entrega o se cancela.
       </p>
 
       <h2>7. Menores de edad</h2>
