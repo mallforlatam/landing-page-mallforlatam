@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <LegalPage title="Acerca de Nosotros" updatedAt="30 de septiembre de 2026">
+    <LegalPage title="Acerca de Nosotros" updatedAt="8 de noviembre de 2026">
       <p>
         Mall for Latam nació de un problema muy concreto: millones de
         personas en Latinoamérica no pueden comprar en tiendas como Amazon,
@@ -38,9 +38,8 @@ export default function AboutPage() {
       <p>
         Nuestra extensión de Chrome te deja agregar productos de tus tiendas
         favoritas con un clic. Nuestro dashboard calcula el costo total por
-        adelantado — producto, comisión de servicio, gastos operativos y
-        envío — sin
-        sorpresas. Y nuestro equipo se encarga de todo el proceso: compra,
+        adelantado (producto, comisión de servicio, servicios internacionales
+        y envío nacional), sin sorpresas. Y nuestro equipo se encarga de todo el proceso: compra,
         consolidación en Miami y envío hasta tu ciudad, con seguimiento en
         cada paso.
       </p>

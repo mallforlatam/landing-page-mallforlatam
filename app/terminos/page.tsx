@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalPage title="Términos y Condiciones" updatedAt="1 de octubre de 2026">
+    <LegalPage title="Términos y Condiciones" updatedAt="8 de noviembre de 2026">
       <p>
         Estos Términos y Condiciones regulan el uso de Mall for Latam (&ldquo;M4L&rdquo;),
         la extensión de Chrome y el dashboard en{' '}
@@ -48,10 +48,10 @@ export default function TermsPage() {
       <p>
         El costo total de tu pedido incluye: el precio de los productos, una
         comisión de servicio del 15% sobre ese subtotal, un cargo fijo de
-        gastos operativos de $5 USD por pedido, una tarifa de envío
-        internacional (Miami → Perú) de $10 USD para paquetes de hasta 3.5
-        kg, y una tarifa plana de envío nacional (actualmente $10 USD, aprox.
-        S/ 35) dentro de Perú. Para pedidos que superen los 3.5 kg,
+        servicios internacionales de $15 USD por pedido (gestión del pedido y
+        envío internacional Miami → Perú para paquetes de hasta 3.5 kg) y una
+        tarifa plana de envío nacional (actualmente $10 USD, aprox. S/ 35)
+        dentro de Perú. Para pedidos que superen los 3.5 kg,
         coordinamos contigo el costo adicional antes de confirmar la compra.
         Te mostramos el total estimado en soles antes de confirmar el pago.
       </p>

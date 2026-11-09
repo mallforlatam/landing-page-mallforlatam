@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function ShippingInfoPage() {
   return (
-    <LegalPage title="Información de Envíos" updatedAt="30 de septiembre de 2026">
+    <LegalPage title="Información de Envíos" updatedAt="8 de noviembre de 2026">
       <p>
         Mall for Latam consolida tus compras de distintas tiendas
         internacionales en nuestro almacén de Miami y las envía en un solo
@@ -47,9 +47,10 @@ export default function ShippingInfoPage() {
           (aprox. S/ 35) a cualquier departamento del Perú.
         </li>
         <li>
-          <strong>Envío internacional (Miami → Perú):</strong> se calcula
-          según el peso y volumen de tu paquete consolidado, y te lo
-          mostramos antes de que salga de Miami.
+          <strong>Servicios internacionales (Miami → Perú):</strong> $15 USD
+          por pedido para paquetes de hasta 3.5 kg, ya incluidos en el total
+          que ves antes de pagar. Si tu paquete supera ese peso, te
+          informamos el costo adicional antes de comprar.
         </li>
       </ul>
 
