@@ -32,39 +32,51 @@ const PAYMENT_METHODS: { src: string; width: number; height: number; label?: str
 ];
 
 const STORES = [
-  { name: 'Amazon', src: '/stores/amazon.png', width: 286, height: 44 },
-  { name: 'eBay', src: '/stores/ebay.png', width: 239, height: 44 },
-  { name: 'Walmart', src: '/stores/walmart.png', width: 401, height: 40 },
-  { name: 'Shein', src: '/stores/shein.png', width: 460, height: 37 },
-  { name: 'Tommy Hilfiger', src: '/stores/tommy-hilfiger.png', width: 1707, height: 19 },
-  { name: 'Jomashop', src: '/stores/jomashop.png', width: 792, height: 28 },
-  { name: "Macy's", src: '/stores/macys.png', width: 336, height: 43 },
-  { name: 'Sephora', src: '/stores/sephora.png', width: 741, height: 29 },
+  { name: 'Amazon', url: 'https://www.amazon.com', src: '/stores/amazon.png', width: 286, height: 44 },
+  { name: 'eBay', url: 'https://www.ebay.com', src: '/stores/ebay.png', width: 239, height: 44 },
+  { name: 'Walmart', url: 'https://www.walmart.com', src: '/stores/walmart.png', width: 401, height: 40 },
+  { name: 'Shein', url: 'https://us.shein.com', src: '/stores/shein.png', width: 460, height: 37 },
+  { name: 'Tommy Hilfiger', url: 'https://usa.tommy.com', src: '/stores/tommy-hilfiger.png', width: 1707, height: 19 },
+  { name: 'Jomashop', url: 'https://www.jomashop.com', src: '/stores/jomashop.png', width: 792, height: 28 },
+  { name: "Macy's", url: 'https://www.macys.com', src: '/stores/macys.png', width: 336, height: 43 },
+  { name: 'Sephora', url: 'https://www.sephora.com', src: '/stores/sephora.png', width: 741, height: 29 },
 ];
 
 // Alturas calculadas para que todos los logos ocupen un área parecida
 // (~6560 px², tope 44 px): los muy anchos, como Tommy Hilfiger, quedan más bajos.
 // La lista va duplicada para que el desplazamiento sea continuo; la copia
-// queda oculta a lectores de pantalla. Con movimiento reducido se detiene.
+// queda oculta a lectores de pantalla y fuera del orden de tabulación.
+// Cada logo enlaza a su tienda (nueva pestaña). Con movimiento reducido se
+// detiene; al pasar el mouse o enfocar un logo, también.
 function StoresCarousel({ label, srLabel }: { label: string; srLabel: string }) {
   return (
     <div className="mt-6 sm:mt-7">
       <p className="mb-3 text-sm sm:text-base font-bold uppercase tracking-widest text-gray-700">{label}</p>
       <p className="sr-only">{srLabel}</p>
       <div className="group relative mx-auto max-w-5xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-        <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+        <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused] motion-reduce:animate-none">
           {[0, 1].map((copy) => (
-            <ul key={copy} className="flex shrink-0 items-center" aria-hidden="true">
+            <ul key={copy} className="flex shrink-0 items-center" aria-hidden={copy === 1 ? true : undefined}>
               {STORES.map((store) => (
-                <li key={store.name} className="flex h-14 items-center px-7 sm:px-12">
-                  <Image
-                    src={store.src}
-                    alt={copy === 0 ? store.name : ''}
-                    width={store.width}
-                    height={96}
-                    style={{ height: store.height }}
-                    className="w-auto object-contain"
-                  />
+                <li key={store.name} className="flex h-14 items-center px-4 sm:px-8">
+                  <a
+                    href={store.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabIndex={copy === 1 ? -1 : undefined}
+                    aria-label={copy === 0 ? store.name : undefined}
+                    title={store.name}
+                    className="flex h-14 items-center rounded-lg px-3 sm:px-4 transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple motion-reduce:hover:scale-100"
+                  >
+                    <Image
+                      src={store.src}
+                      alt=""
+                      width={store.width}
+                      height={96}
+                      style={{ height: store.height }}
+                      className="w-auto object-contain"
+                    />
+                  </a>
                 </li>
               ))}
             </ul>
