@@ -47,14 +47,17 @@ const STORES = [
 // La lista va duplicada para que el desplazamiento sea continuo; la copia
 // queda oculta a lectores de pantalla y fuera del orden de tabulación.
 // Cada logo enlaza a su tienda (nueva pestaña). Con movimiento reducido se
-// detiene; al pasar el mouse o enfocar un logo, también.
+// detiene; también al pasar el mouse o al llegar con el teclado (Tab). Se
+// usa :focus-visible y, además, el enlace suelta el foco tras un clic con
+// mouse: antes quedaba enfocado al volver de la tienda y el carrusel
+// se congelaba hasta recargar.
 function StoresCarousel({ label, srLabel }: { label: string; srLabel: string }) {
   return (
     <div className="mt-6 sm:mt-7">
       <p className="mb-3 text-sm sm:text-base font-bold uppercase tracking-widest text-gray-700">{label}</p>
       <p className="sr-only">{srLabel}</p>
       <div className="group relative mx-auto max-w-5xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-        <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused] motion-reduce:animate-none">
+        <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] group-has-[:focus-visible]:[animation-play-state:paused] motion-reduce:animate-none">
           {[0, 1].map((copy) => (
             <ul key={copy} className="flex shrink-0 items-center" aria-hidden={copy === 1 ? true : undefined}>
               {STORES.map((store) => (
@@ -64,6 +67,12 @@ function StoresCarousel({ label, srLabel }: { label: string; srLabel: string }) 
                     target="_blank"
                     rel="noopener noreferrer"
                     tabIndex={copy === 1 ? -1 : undefined}
+                    // Con mouse/toque (detail > 0) se quita el foco: si no, al volver
+                    // de la tienda el enlace sigue enfocado y el carrusel no se mueve.
+                    // Con teclado (Enter, detail 0) el foco se conserva.
+                    onClick={(e) => {
+                      if (e.detail > 0) e.currentTarget.blur();
+                    }}
                     aria-label={copy === 0 ? store.name : undefined}
                     title={store.name}
                     className="flex h-14 items-center rounded-lg px-3 sm:px-4 transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple motion-reduce:hover:scale-100"
